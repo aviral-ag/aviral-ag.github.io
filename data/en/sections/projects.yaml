@@ -15,51 +15,33 @@ buttons:
 - name: Professional
   filter: "professional"
 - name: Academic
-  filter: "academic"
+  filter: "Academic"
 - name: Hobby
   filter: "hobby"
 
 # your projects
 projects:
-- name: Kubernetes
-  logo: /images/sections/projects/kubernetes.png
+- name: Water Resiliency Model for Central Coast California 
+  logo: 
   role: Contributor
-  timeline: "March 2018 - Present"
-  repo: https://github.com/kubernetes/kubernetes # If your project is a public repo on GitHub, then provide this link. it will show star count.
-  #url: ""  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
-  summary: Production-Grade Container Scheduling and Management.
-  tags: ["professional", "kubernetes", "cloud"]
+  timeline: "September 2021 - February 2023"
+  repo:  
+  summary: Analyzed climate change impacts on Central California water infrastructure, using GIS and DWR data to assess basin vulnerabilities. Provided data-driven insights that supported five regional water management plans.Led a team of 3 in developing a Python script computing a dynamic resilience index for San Luis Obispo County, integrating 10+ data sources on water demand, supply, and climate projections to enhance drought preparedness efforts.
+  tags: ["Academic"]
 
-- name: Tensorflow
-  logo: /images/sections/projects/tensorflow.png
+- name: Life Cycle Assessment of Geothermal Energy for Data Centers
+  logo: 
   role: Developer
-  timeline: "Jun 2018 - Present"
-  repo: https://github.com/tensorflow/tensorflow
-  #url: ""
-  summary: An Open Source Machine Learning Framework for Everyone.
-  tags: ["professional", "machine-learning"]
+  timeline: "September 2022 - December 2022"
+  repo: 
+  url: 
+  summary: Analyzed the environmental and economic viability of geothermal energy for data centers. Conducted a comparative analysis between electricity from the grid and geothermal energy along with a waste recovery system, and presented a poster with findings and recommendations. 
+  tags: ["Academic"]
 
-- name: A sample academic paper
-  role: Team Lead
-  timeline: "Jan 2017 - Nov 2017"
-  url: "https://www.example.com"
-  summary: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente eius reprehenderit animi suscipit autem eligendi esse amet aliquid error eum. Accusantium distinctio soluta aliquid quas placeat modi suscipit eligendi nisi.
-  tags: ["academic","iot"]
+- name: Sustainable Energy Model for 2050
+  role: Sole Contributer
+  timeline: "January 2022 - March 2022"
+  url: 
+  summary: Built a scoping framework that involved looking at the current energy mix, policies, and potential for future technologies of countries to develop a scenario for creating a sustainable energy system for 9 billion people in 2050 in accordance to meet Paris Agreement targets.
+  tags: ["Academic"]
 
-- name: Nocode
-  logo: /images/sections/projects/no-code.png
-  role: Nothing
-  timeline: "Oct 2019 - Dec 2019"
-  repo: https://github.com/kelseyhightower/nocode
-  #url: ""
-  summary: The best way to write secure and reliable applications. Write nothing; deploy nowhere.
-  tags: ["hobby", "fun"]
-
-- name: Toha
-  logo: /images/sections/projects/toha.png
-  image: /images/sections/projects/toha_website.png
-  role: Owner
-  timeline: "Jun 2019 - Present"
-  repo: https://github.com/hossainemruz/toha
-  summary: A Hugo theme for personal portfolio.
-  tags: ["hobby","hugo","theme","professional"]

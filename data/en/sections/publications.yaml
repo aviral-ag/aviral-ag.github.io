@@ -12,71 +12,67 @@ section:
 buttons:
 - name: All
   filter: "all"
-- name: "Machine Learning"
-  filter: "machinelearning"
-- name: "Image Processing"
-  filter: "image-processing"
-- name: Security
-  filter: "security"
+- name: Energy
+  filter: "Energy"
+- name: Air Pollution
+  filter: "Air Pollution"
+- name: Water Resources
+  filter: "Water Resources"
 
 # your publications
 publications:
-- title: An Example Paper on Machine Learning
+- title: Financial viability assessment of concentrated solar power technologies under Indian climatic conditions. 
   publishedIn:
-    name: 2020 IEEE Region Symposium (TENSYMP)
-    date: 7 June 2020
-    url: https://example.com
+    name: Sustainable Energy Technologies and Assessments
+    date: 2020
+    url: https://doi.org/10.1016/j.seta.2020.100928
   authors:
-  - name: Dr. Madman
-    url: https://example.com
-  - name: Dr. Lessmad
-    url: https://example.com
-  - name: Dr. Moremad
-    url: https://example.com
-  - name: Dr. Goodman
-    url: https://example.com
+  - name: Sankalp Kumar
+    url: 
+  - name: Aviral Agarwal
+    url: 
+  - name: Dr. Anil Kumar
+    url: 
   paper:
-    summary: Voluptate in id id voluptate laboris. Minim mollit aliquip sit aliqua ut exercitation voluptate eiusmod consequat pariatur sunt enim veniam. Velit esse tempor laboris anim tempor officia. Magna non labore duis do esse sit do ipsum culpa. Officia consequat id non duis culpa dolor. Excepteur magna non nostrud cupidatat aute aliqua aliquip.
-    url: https://example.com
-  categories: ["machinelearning","image-processing"]
-  tags: ["Machine Learning", "Autonomous Driving", "Computer Vision"]
+    summary: The study identifies Jodhpur as the optimal location for a 50 MW Solar Power Tower CSP plant in India, with the lowest LCOE and highest NPV, aiding in technology and investment decisions.
+    url: https://doi.org/10.1016/j.seta.2020.100928
+  categories: ["Energy"]
+  tags: ["Solar Energy", "Techno-Economic"]
 
-- title: An Sample Paper on Image Processing
+- title: Comparative study on air quality status in Indian and Chinese cities before and during the COVID-19 lockdown period. Air Quality
   publishedIn:
-    name: 2020 IEEE Region Symposium (TENSYMP)
-    date: 7 June 2020
-    url: https://example.com
+    name: Atmosphere and Health, 13(10), 1167–1178
+    date: 2020
+    url: https://doi.org/10.1007/s11869-020-00881-z
   authors:
-  - name: Dr. Madman
-    url: https://example.com
-  - name: Dr. Lessmad
-    url: https://example.com
-  - name: Dr. Moremad
-    url: https://example.com
-  - name: Dr. Goodman
-    url: https://example.com
+  - name: Aviral Agarwal
+    url: 
+  - name: Aman Kaushik
+    url: 
+  - name: Sankalp Kumar
+    url: 
+  - name: Dr. Rajeev Kumar Mishra
+    url: 
   paper:
-    summary: Ullamco magna minim cupidatat Lorem ea ex aliqua fugiat et. Dolor quis cillum ea duis irure et commodo aliquip consectetur ullamco labore ut anim nisi. Commodo reprehenderit est consectetur tempor adipisicing occaecat exercitation amet do aliquip dolor do irure. Labore officia ut magna pariatur reprehenderit et ex sit sunt. Magna proident ullamco adipisicing sit.
-    url: https://example.com
+    summary: Lockdown measures during COVID-19 significantly reduced AQI levels of PM2.5 and NO2 in major cities of India and China, highlighting effective pathways for air pollution mitigation.
+    url: https://doi.org/10.1007/s11869-020-00881-z
   categories: ["image-processing"]
-  tags: ["Image Processing", "Computer Vision"]
+  tags: ["Air Pollution", "COVID-19", "PM 2.5", "NO3"]
 
-- title: An Example Paper on Security
+- title: Predicting Ground Level PM2.5 Concentration Over Delhi Using Landsat 8 Satellite Data
   publishedIn:
-    name: 2020 IEEE Region Symposium (TENSYMP)
-    date: 7 June 2020
-    url: https://example.com
+    name: International Journal of Remote Sensing, 42(3), 827-838
+    date: 2020
+    url: https://doi.org/10.1080/2150704X.2020.1832279
   authors:
-  - name: Dr. Madman
-    url: https://example.com
-  - name: Dr. Lessmad
-    url: https://example.com
-  - name: Dr. Moremad
-    url: https://example.com
-  - name: Dr. Goodman
-    url: https://example.com
+  - name: Dr. Rajeev Kumar Mishra
+    url: 
+  - name: Aviral Agarwal
+    url: 
+  - name: Ankita Shukla
+    url: 
   paper:
-    summary: Dolor ad cupidatat pariatur nulla ipsum ex ullamco nisi anim ullamco. Dolore elit esse in exercitation minim aliqua. Amet velit incididunt magna laboris. Proident reprehenderit deserunt ad officia duis dolor. Tempor nostrud ullamco ullamco sint deserunt cupidatat irure minim consectetur nulla adipisicing sunt.
-    url: https://example.com
+    summary: A multispectral empirical model using Landsat 8 data effectively estimates PM2.5 concentrations in Delhi with adequate accuracy, correlating satellite reflectance with in-situ measurements and meteorological data.
+    url: https://doi.org/10.1080/2150704X.2020.1832279
   categories: ["security"]
-  tags: ["Machine Learning", "Autonomous Driving", "Machine Vision"]
+  tags: ["Air Pollution", "Remote Sensing", "PM 2.5"]

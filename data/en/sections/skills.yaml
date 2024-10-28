@@ -1,4 +1,3 @@
-# section information
 section:
   name: Skills
   id: skills
@@ -6,66 +5,104 @@ section:
   weight: 2
   showOnNavbar: true
   filter: true
-  # Can optionally hide the title in sections
-  # hideTitle: true
 
-# filter buttons
 buttons:
 - name: All
   filter: "all"
-- name: Basic
-  filter: "basic"
-- name: Language
+- name: Programming Language
   filter: "language"
-- name: Container
-  filter: "container"
-- name: Others
-  filter: "others"
+- name: Data Analysis
+  filter: "data-analysis"
+- name: GIS & CAD
+  filter: "gis-cad"
+- name: Visualization
+  filter: "visualization"
+- name: Version Control
+  filter: "version-control"
+- name: Life Cycle Assessment
+  filter: "lca"
 
-# Your Skills.
-# Give a summary of you each skill in the summary section.
 skills:
-- name: Kubernetes
-  logo: /images/sections/skills/kubernetes.png
-  summary: "Capable of deploying, managing application on Kubernetes. Experienced in writing Kubernetes controllers for CRDs."
-  categories: ["container"]
-  url: "https://kubernetes.io/"
+- name: Python
+  logo: /images/sections/skills/python.png
+  summary: "Main programming language for professional development. Capable of writing scalable, testable, and maintainable code."
+  categories: ["language"]
+  url: "https://www.python.org/"
 
-- name: Go Development
-  logo: /images/sections/skills/go.png
-  summary: "Using as the main language for professional development. Capable of writing scalable, testable, and maintainable program."
-  categories: ["basic", "language"]
-  url: "https://golang.org/"
+- name: R
+  logo: /images/sections/skills/r.png
+  summary: "Experienced in statistical analysis and data visualization using R."
+  categories: ["language", "data-analysis"]
+  url: "https://www.r-project.org/"
 
-- name: Cloud Computing
-  logo: /images/sections/skills/cloud.png
-  summary: "Worked with most of the major clouds such as GCP, AWS, Azure etc."
-  categories: ["others"]
+- name: SQL
+  logo: /images/sections/skills/sql.png
+  summary: "Skilled in database management and querying using SQL."
+  categories: ["data-analysis"]
+  url: "https://www.sql.org/"
 
-- name: Docker
-  logo: /images/sections/skills/docker.svg
-  summary: "Write most of the programs as dockerized container. Experienced with multi-stage, multi-arch build process."
-  categories: ["container"]
-  url: "https://www.docker.com/"
-
-- name: Prometheus
-  logo: /images/sections/skills/prometheus.png
-  summary: "Capable of setup, configure Prometheus metrics. Experienced with PromQL, AlertManager. Also, experienced with writing metric exporters."
-  categories: ["basic"]
-  url: "https://prometheus.io/"
-
-- name: Linux
-  logo: /images/sections/skills/linux.png
-  summary: "Using as the main operating system. Capable of writing bash/shell scripts."
-  categories: ["others"]
-
-- name: Git
-  logo: /images/sections/skills/git.png
-  summary: "Experienced with git-based development. Mostly, use Github. Also, have experience in working with GitLab."
-  categories: ["basic"]
-  url: "https://git-scm.com/"
+- name: MATLAB
+  logo: /images/sections/skills/matlab.png
+  summary: "Experienced in numerical analysis and simulations using MATLAB."
+  categories: ["language", "data-analysis"]
+  url: "https://www.mathworks.com/products/matlab.html"
 
 - name: C++
   logo: /images/sections/skills/c++.png
-  summary: "Know basic C/C++ programming. Used for contest programming and problem solving."
-  categories: ["basic", "language"]
+  summary: "Basic understanding of C++ for problem-solving and competitive programming."
+  categories: ["language"]
+  url: "https://isocpp.org/"
+
+- name: Git
+  logo: /images/sections/skills/git.png
+  summary: "Proficient in version control using Git, including experience with GitHub and GitLab."
+  categories: ["version-control"]
+  url: "https://git-scm.com/"
+
+- name: ArcGIS Pro
+  logo: /images/sections/skills/arcgis.svg
+  summary: "Experienced in spatial analysis and GIS mapping using ArcGIS Pro."
+  categories: ["gis-cad"]
+  url: "https://www.esri.com/en-us/arcgis/products/arcgis-pro/overview"
+
+- name: QGIS
+  logo: /images/sections/skills/qgis.png
+  summary: "Proficient in open-source GIS analysis using QGIS."
+  categories: ["gis-cad"]
+  url: "https://www.qgis.org/"
+
+- name: SimaPro
+  logo: /images/sections/skills/simapro.jpeg
+  summary: "Experience with life cycle assessment using SimaPro."
+  categories: ["lca"]
+  url: "https://simapro.com/"
+
+- name: AutoCAD
+  logo: /images/sections/skills/autocad.png
+  summary: "Experience in 2D and 3D modeling using AutoCAD."
+  categories: ["gis-cad"]
+  url: "https://www.autodesk.com/products/autocad/overview"
+
+- name: SolidWorks
+  logo: /images/sections/skills/solidworks.png
+  summary: "Proficient in 3D CAD design using SolidWorks."
+  categories: ["gis-cad"]
+  url: "https://www.solidworks.com/"
+
+- name: PowerBI
+  logo: /images/sections/skills/powerbi.svg
+  summary: "Experienced in data visualization and business intelligence using PowerBI."
+  categories: ["visualization"]
+  url: "https://powerbi.microsoft.com/"
+
+- name: Tableau
+  logo: /images/sections/skills/tableau.svg
+  summary: "Skilled in data visualization using Tableau for business insights."
+  categories: ["visualization"]
+  url: "https://www.tableau.com/"
+
+- name: Excel VBA
+  logo: /images/sections/skills/excelvba.jpg
+  summary: "Proficient in automating Excel tasks using VBA."
+  categories: ["data-analysis"]
+  url: "https://docs.microsoft.com/en-us/office/vba/api/overview/excel"

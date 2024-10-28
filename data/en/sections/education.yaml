@@ -10,95 +10,37 @@ section:
   # hideTitle: true
 
 degrees:
-- name: Ph.D in Quantum Cryptography
-  icon: fa-microscope
-  timeframe: 2016-2020
-  institution:
-    name: ABC University of Technology
-    url: "#"
-    logo: /images/sections/education/tech_college.png
-    # Can optionally show a different logo for dark theme
-    # darkLogo: /images/sections/education/tech_college.png
-  grade: #(optional)
-    scale: CGPA
-    achieved: 3.6
-    outOf: 4
-  publications: #(optional)
-  - title: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    url: "#"
-  - title: Fusce eu augue ut odio porttitor pulvinar.
-    url: "#"
-  - title: Nullam vitae orci tincidunt purus viverra pulvinar.
-    url: "#"
-- name: B.Sc. in Computer Science & Engineering
+- name: Masters of Sciences in Civil and Environmental Engineering
   icon: fa-graduation-cap
-  timeframe: 2012-2016
+  timeframe: 2021-2023
   institution:
-    name: University of XYZ
-    url: "#"
-    logo: /images/sections/education/university.jpg
-    # Can optionally show a different logo for dark theme
-    # darkLogo: /images/sections/education/university.jpg
+    name: Stanford Univeristy
+    url: "https://www.stanford.edu/"
+  grade: #(optional)
+    scale: GPA
+    achieved: 3.67
+    outOf: 4.0
+  extracurricularActivities: #(optional)
+  - Member of Stanford Cricket Team.
+- name: Bachelor of Technology in Environmental Engineering
+  icon: fa-graduation-cap
+  timeframe: 2017-2021
+  institution:
+    name: Delhi Technological University
+    url: "https://www.dtu.ac.in/"
   grade: #(optional)
     scale: CGPA
-    achieved: 3.5
-    outOf: 4
-  takenCourses: #(optional)
-    # if true, the courses will be rendered as a table otherwise it will render as a list and the grades will be hidden.
-    showGrades: true
-    collapseAfter: 3
-    courses:
-    - name: Data Structures and Algorithm
-      achieved: 3.75
-      outOf: 4
-    - name: Network Security
-      achieved: 3.80
-      outOf: 4
-    - name: Operating System
-      achieved: 3.5
-      outOf: 4
-    - name: Artificial Intelligent
-      achieved: 3.75
-      outOf: 4
+    achieved: 8.91
+    outOf: 10
   publications: #(optional)
-  - title: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    url: "#"
-  - title: Fusce eu augue ut odio porttitor pulvinar.
-    url: "#"
+  - title: Financial viability assessment of concentrated solar power technologies under Indian climatic conditions. Sustainable Energy Technologies and Assessments, 100928
+    url: "https://doi.org/10.1016/j.seta.2020.100928"
+  - title: Predicting Ground Level PM2.5 Concentration Over Delhi Using Landsat 8 Satellite Data. International Journal of Remote Sensing, 42(3), 827-838.
+    url: "https://doi.org/10.1080/2150704X.2020.1832279"
+  - title: Comparative study on air quality status in Indian and Chinese cities before and during the COVID-19 lockdown period. Air Quality, Atmosphere and Health, 13(10), 1167–1178.
+    url: "https://doi.org/10.1007/s11869-020-00881-z"
   extracurricularActivities: #(optional)
-  - In vitae facilisis est, eget porta sem.
-  - Vestibulum consectetur lorem justo, at laoreet lorem feugiat et.
-  - Duis sed massa feugiat, ornare justo et, aliquam est.
-  - Pellentesque ut fringilla magna.
-  custonSections: #(optional)
-    - name: Thesis
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - name: Supervisor
-      content: Fusce eu augue ut odio porttitor pulvinar.
-- name: Higher Secondary School Certificate
-  icon: fa-university
-  timeframe: 2010-2012
-  institution:
-    name: MST College of Science
-    url: "#"
-    logo: /images/sections/education/science_college.png
-    # Can optionally show a different logo for dark theme
-    # darkLogo: /images/sections/education/science_college.png
-  grade: #(optional)
-    scale: GPA
-    achieved: 5
-    outOf: 5
-  extracurricularActivities: #(optional)
-  - In vitae facilisis est, eget porta sem.
-  - Vestibulum consectetur lorem justo, at laoreet lorem feugiat et.
-  - Duis sed massa feugiat, ornare justo et, aliquam est.
-  - Pellentesque ut fringilla magna.
-- name: Secondary School Certificate
-  icon: fa-school
-  timeframe: 2005-2010
-  institution:
-    name: JK School of Science
-  grade: #(optional)
-    scale: GPA
-    achieved: 4.5
-    outOf: 5
+  - President, DTU Toastmasters
+  - Creative Head, Entrepreneurship Cell DTU 
+  - Aerodynamics Head, Okami Racing Team (India's first Electric Racing Bike Team)
+  
