@@ -1,6 +1,6 @@
 name: Deploy to Github Pages
 
-# run when a commit is pushed to "source" branch
+# run when a commit is pushed to "source" branch.
 on:
   push:
     branches:
