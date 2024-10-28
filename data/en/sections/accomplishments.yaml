@@ -1,6 +1,6 @@
 # section information
 section:
-  name: Courses
+  name: Awards
   id: accomplishments
   enable: true
   weight: 9
@@ -17,7 +17,7 @@ accomplishments:
     name: Delhi Technological University
     url: https://www.linuxfoundation.org
   courseOverview: This course helps to understand the key concepts such as networking, storage, security, maintenance, logging and monitoring, application lifecycle, troubleshooting, API object primitives etc. It also help to grow the ability to establish basic use-cases for end users.
-  certificateURL: "https://example.com"
+  # certificateURL: "https://example.com"
 
 - name: Exceptional Research Awards
   timeline: "Jun 2019 - Jan 2021"
@@ -25,7 +25,7 @@ accomplishments:
     name: Coursera
     url: https://www.coursera.org
   courseOverview: "This course provides a broad introduction to machine learning, datamining, and statistical pattern recognition. Topics include: (i) Supervised learning (parametric/non-parametric algorithms, support vector machines, kernels, neural networks). (ii) Unsupervised learning (clustering, dimensionality reduction, recommender systems, deep learning). (iii) Best practices in machine learning (bias/variance theory; innovation process in machine learning and AI)."
-  certificateURL: "https://example.com"
+  # certificateURL: "https://example.com"
 
 - name: Year Topper
   timeline: "2019-2021"
@@ -33,6 +33,6 @@ accomplishments:
     name: educative
     url: https://www.educative.io
   courseOverview: This course is a complete guide to master the SDIs. It is created by hiring managers who’ve been working at Google, Facebook, Microsoft, and Amazon. We've carefully chosen a set of questions that have not only been repeatedly asked at top companies, but also provide a thorough experience to handle any system design problem.
-  certificateURL: "https://example.com"
+  # certificateURL: "https://example.com"
 
 
