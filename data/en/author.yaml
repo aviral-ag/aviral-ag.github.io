@@ -7,7 +7,7 @@ image: "images/author/aviral.jpeg"
 # give your some contact information. they will be used in the footer
 contactInfo:
   email: "aviralag@alumni.stanford.edu"
-  phone: "+1-650-862-2155"
+  # phone: "+1-650-862-2155"
   github: aviral-ag
   linkedin: aviralag
 
