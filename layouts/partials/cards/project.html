@@ -34,7 +34,7 @@
                         {{ $imageImage := resources.Get .image }}
                         {{ if $imageImage }}
                         {{ if ne $imageImage.MediaType.SubType "svg" }}
-                        {{ $imageImage = $imageImage.Fit "1000x1000" }}
+                        {{ $imageImage = $imageImage.Fit "500x500" }} 
                         {{ end }}
                         <img class="card-img-right" src="{{ $imageImage.RelPermalink }}" alt="{{ .name }}" />
                         {{ end }}
@@ -63,12 +63,14 @@
     .project-image {
         flex: 0 0 auto;
         padding: 1rem;
+        max-width: 500px; /* Adjust based on desired image size */
     }
 
     .card-img-right {
-        max-width: 300px;
-        height: auto;
-        border-radius: 8px;
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 1px;
     }
 
     .project-tags-holder {
