@@ -1,8 +1,8 @@
 # some information about you
 name: "Aviral Agarwal"
-nickname: "Aviral!"
+nickname: "Glad you made it to this corner of the internet!"
 # greeting message before your name. it will default to "Hi! I am" if not provided
-greeting: "Glad you made it to this corner of the internet. I'm "
+greeting: "I'm Aviral"
 image: "images/author/aviral.jpeg"
 # give your some contact information. they will be used in the footer
 contactInfo:

@@ -30,8 +30,8 @@ degrees:
     url: "https://www.dtu.ac.in/"
   grade: #(optional)
     scale: CGPA
-    achieved: "8.91 (Gold Medalist)"
-    outOf: 10
+    achieved: "8.91"
+    outOf: "10 (Gold Medalist)"
   publications: #(optional)
   - title: Financial viability assessment of concentrated solar power technologies under Indian climatic conditions. Sustainable Energy Technologies and Assessments, 100928
     url: "https://doi.org/10.1016/j.seta.2020.100928"
