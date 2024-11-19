@@ -1,6 +1,5 @@
 # some information about you
-name: "Aviral Agarwal"
-nickname: "Glad you made it to this corner of the internet!"
+name: "Glad you made it to this corner of the internet!"
 # greeting message before your name. it will default to "Hi! I am" if not provided
 greeting: "I'm Aviral"
 image: "images/author/aviral.jpeg"

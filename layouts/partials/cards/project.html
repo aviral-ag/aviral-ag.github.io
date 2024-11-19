@@ -1,7 +1,6 @@
 <div class="col-12 p-2 filtr-item" data-category='all, {{ delimit .tags "," }}'>
     <div class="card mt-1 full-width-card">
-        <a href="{{ if .repo }}{{ .repo }}{{ else if .url }}{{ .url }}{{ else }}javascript:void(0){{ end }}" {{ if or
-            .repo .url }}target="_blank" rel="noopener" {{ end }}>
+        <a>
             <div class="card-body text-justify">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="project-info">
