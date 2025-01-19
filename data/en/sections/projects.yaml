@@ -12,29 +12,52 @@ section:
 buttons:
 - name: All
   filter: "all"
-- name: Professional
-  filter: "professional"
-- name: Academic
-  filter: "Academic"
-- name: Hobby
-  filter: "hobby"
+- name: Hydrology
+  filter: "hydrology"
+- name: Sustainability
+  filter: "sustainability"
 
 # your projects
 projects:
+
+- name: Soil Moisture Balance Model
+  image: "images/sections/projects/SMB.jpeg"
+  timeline: "January 2024 - August 2024"
+  summary: Performed frequency analysis on stream flows and precipitation in northern Ohio using the Vogel et al. (2011) method, utilizing 76 years of data from 133 stream gauges. Assessed the impact of trends on extreme events over the next 20 years for 100- to 500-year return periods through the application of magnification factors and reduced return periods.
+  tags: ["Hydrology"]
+
+- name: Entrepreneurial Strategy Lab
+  image: "images/sections/projects/Carma.png"
+  timeline: "January 2023 - June 2023"
+  summary: Worked in a team on 8 case studies with startup founders, analyzing business models, financing strategies, and operational challenges. Coordinated mock term sheets, cap tables, and investment strategies, applying financial accounting to model capital needs and develop solutions for growth, culture, and risk management in high-growth ventures.
+  tags: ["Sustainability"]
+
+- name: Frequency Analysis of Non-Stationary Hydrological Extremes in Northern Ohio
+  image: "images/sections/projects/Freq_Anal.jpg"
+  timeline: "September 2022 - Decemeber 2022"
+  summary: Performed frequency analysis on stream flows and precipitation in northern Ohio using the Vogel et al. (2011) method, utilizing 76 years of data from 133 stream gauges. Assessed the impact of trends on extreme events over the next 20 years for 100- to 500-year return periods through the application of magnification factors and reduced return periods.
+  tags: ["Hydrology"]
+
+- name: Flood Mitigation Analysis for Foster City
+  image: "images/sections/projects/Flood.png"
+  timeline: "September 2021 - December 2021"
+  summary: Executed a data-driven flood analysis using concepts of expected loss and exceedance probability along with 10,000 Monte Carlo simulations. Proposed a hybrid solution combining insurance and levees, reducing potential annual losses by 40% and eliminating risk of $400K+ damages.
+  tags: ["Hydrology"]
+
 - name: Water Resiliency Model for Central Coast California 
   image: "images/sections/projects/sustain_index.jpg"
   timeline: "September 2021 - February 2023"
   summary: Analyzed climate change impacts on Central California water infrastructure, using GIS and DWR data to assess basin vulnerabilities. Provided data-driven insights that supported five regional water management plans.Led a team of 3 in developing a Python script computing a dynamic resilience index for San Luis Obispo County, integrating 10+ data sources on water demand, supply, and climate projections to enhance drought preparedness efforts.
-  tags: ["Academic"]
+  tags: ["Hydrology"]
 
 - name: Life Cycle Assessment of Geothermal Energy for Data Centers
   image: "images/sections/projects/LCA.jpg"
   timeline: "September 2022 - December 2022"
   summary: Analyzed the environmental and economic viability of geothermal energy for data centers. Conducted a comparative analysis between electricity from the grid and geothermal energy along with a waste recovery system, and presented a poster with findings and recommendations. 
-  tags: ["Academic"]
+  tags: ["Sustainability"]
 
 - name: Sustainable Energy Model for 2050
   image: "images/sections/projects/Model.png"
   timeline: "January 2022 - March 2022"
   summary: Built a scoping framework that involved looking at the current energy mix, policies, and potential for future technologies of countries to develop a scenario for creating a sustainable energy system for 9 billion people in 2050 in accordance to meet Paris Agreement targets.
-  tags: ["Academic"]
+  tags: ["Sustainability"]
