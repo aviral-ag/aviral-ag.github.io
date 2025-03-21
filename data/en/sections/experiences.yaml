@@ -10,45 +10,98 @@ section:
 
 # Your experiences
 experiences:
+
+- company:
+    name: Water Resources Engineering Inc.
+    url: "https://wrewater.com/"
+    location: San Francisco, CA
+    overview:
+  positions:
+  - designation: Staff Engineer
+    start: January 2025
+    end: Present
+    responsibilities:
+    - Driving sustainable water supply strategies for Bay Area cities, leading a $5 million, 10 MGD water reuse project to enhance resilience and optimize costs.
+
 - company:
     name: EKI Environment and Water Inc.
-    url: "https://firstroundsonme.co/"
+    url: "https://www.ekiconsult.com/"
     location: Daly City, CA
-    overview: 
+    overview:
   positions:
   - designation: Environmental Engineer
     start: July 2023
     end: October 2024
     responsibilities:
-    - Developed an R-based soil moisture balance model for a 100,000+ acre basin,
-        accurately calculating irrigation demand. Executed MODFLOW 6 simulations
-        using FloPy for scenario analysis to inform pumping stress across one of
-        California’s most over-drafted regions.
-    - Streamlined geospatial data for California water districts, optimizing
-        workflows with ArcGIS Pro and Python. Reduced processing time from 2 days
-        to a few hours and improved data accuracy over 20+ years for 5 districts.
-    - Independently assessed applied water usage on a 5,000-acre area using 25+
-        years of land use data for CUP-E and USADR. Compared CropScape and
-        OpenET datasets, analyzing vegetative water use for DWR/UCDANR.
-    - Utilized DWR Airborne Electromagnetic (AEM) surveys and borehole
-        datasets to develop coarse fraction profiles across 9 aquifer layers.
-        Generated kriging-based rasters in Surfer for a 130,000-acre water district.
-    - Spearheaded a 2-month project to centralize codebases on GitHub, reducing
-        version conflicts by 40% and cutting deployment time by 20%. Improved team
-        workflows for 10 engineers via Docker and AWS integration.
+    - Developed an R-based soil moisture balance model for a 100,000+ acre basin, accurately calculating irrigation demand. Executed MODFLOW 6 simulations using FloPy for scenario analysis to inform pumping stress across one of California’s most over-drafted regions.
+    - Streamlined geospatial data for California water districts, optimizing workflows with ArcGIS Pro and Python. Reduced processing time from 2 days to a few hours and improved data accuracy over 20+ years for 5 districts.
+    - Independently assessed applied water usage on a 5,000-acre area using 25+ years of land use data for CUP-E and USADR. Compared CropScape and OpenET datasets, analyzing vegetative water use for DWR/UCDANR.
+    - Utilized DWR Airborne Electromagnetic (AEM) surveys and borehole datasets to develop coarse fraction profiles across 9 aquifer layers. Generated kriging-based rasters in Surfer for a 130,000-acre water district.
+    - Spearheaded a 2-month project to centralize codebases on GitHub, reducing version conflicts by 40% and cutting deployment time by 20%. Improved team workflows for 10 engineers via Docker and AWS integration.
 
 - company:
     name: Jacobs Engineering Group
-    url: "https://www.example.com"
+    url: "https://www.jacobs.com/"
     location: San Francisco, CA
-    logo: 
-    # Can optionally show a different logo for dark theme
-    # darkLogo: /images/sections/experiences/company2.jpg
-    overview: 
+    logo:
+    overview:
   positions:
   - designation: Environmental, Health and Safety - Information Management Intern
     start: June 2022
     end: March 2023
     responsibilities:
-    - Researched and recommended methodology to develop an award-winning Carbon Sequestration Potential Tool across the carbon sinks in world. 
-    - Created and quality checked several Power BI dashboards that transformed complex environmental, health, and safety data into real-time visualizations for 10+ stakeholders, reducing reporting time by 30\%.
+    - Researched and recommended methodology to develop an award-winning Carbon Sequestration Potential Tool across the carbon sinks in the world. 
+    - Created and quality checked several Power BI dashboards that transformed complex environmental, health, and safety data into real-time visualizations for 10+ stakeholders, reducing reporting time by 30%.
+
+- company:
+    name: The Bill Lane Center for the American West - Stanford University
+    url: "https://west.stanford.edu/"
+    location: Stanford, CA
+    logo:
+    overview:
+  positions:
+  - designation: Research Assistant
+    start: September 2021
+    end: February 2023
+    responsibilities:
+    - Analyzed climate change impacts on Central California water infrastructure, using GIS and DWR data to assess basin vulnerabilities, supporting five regional water management plans.
+    - Led a team of 3 in developing a Python script computing a dynamic resilience index for San Luis Obispo County, integrating 10+ data sources on water demand, supply, and climate projections to enhance drought preparedness efforts.
+
+- company:
+    name: Global Projects Center
+    url: "https://gpc.stanford.edu/"
+    location: Stanford, CA
+    logo:
+    overview:
+  positions:
+  - designation: Research Fellow
+    start: September 2021
+    end: December 2022
+    responsibilities:
+    - Explored pathways of data that are dynamically priced and traded in the Digital Cities and Disruptive Technology program. Investigated technological components toward creating a marketplace of data.
+
+- company:
+    name: Indian Institute of Technology, Bombay
+    url: "https://www.iitb.ac.in/"
+    location: Mumbai, India
+    logo:
+    overview:
+  positions:
+  - designation: Research Intern
+    start: December 2019
+    end: January 2021
+    responsibilities:
+    - Mapped ambient air pollution exposure assessment in a cohort of adult women at 60+ homes in three metropolitan cities – Delhi, Bengaluru, and Mumbai during the summer and winter seasons. Analyzed spatial traffic proxy variables using ArcGIS, Python, and Excel.
+
+- company:
+    name: Center for Science and Environment
+    url: "https://www.cseindia.org/"
+    location: Delhi, India
+    logo:
+    overview:
+  positions:
+  - designation: Policy Research Intern
+    start: May 2019
+    end: July 2019
+    responsibilities:
+    - Identified numerous environmental, social, and health concerns, financing, and policies regarding mine closure in India and globally, and collated the data.

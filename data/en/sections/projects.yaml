@@ -26,10 +26,10 @@ projects:
   summary: Performed frequency analysis on stream flows and precipitation in northern Ohio using the Vogel et al. (2011) method, utilizing 76 years of data from 133 stream gauges. Assessed the impact of trends on extreme events over the next 20 years for 100- to 500-year return periods through the application of magnification factors and reduced return periods.
   tags: ["Hydrology"]
 
-- name: Entrepreneurial Strategy Lab
+- name: CARMA - Startup Simulation Project
   image: "images/sections/projects/Carma.png"
   timeline: "January 2023 - June 2023"
-  summary: Worked in a team on 8 case studies with startup founders, analyzing business models, financing strategies, and operational challenges. Coordinated mock term sheets, cap tables, and investment strategies, applying financial accounting to model capital needs and develop solutions for growth, culture, and risk management in high-growth ventures.
+  summary: Spearheaded a 6-month startup incubation project with a team of 5 to develop a carbon management app, overseeing program management, team onboarding, milestone tracking, and resource allocation while implementing incentives through discounts and gamification. Presented the idea at TreeHacks 2023 and Stanford Graduate School of Business Ignite Program of 2023. 
   tags: ["Sustainability"]
 
 - name: Frequency Analysis of Non-Stationary Hydrological Extremes in Northern Ohio
@@ -61,3 +61,4 @@ projects:
   timeline: "January 2022 - March 2022"
   summary: Built a scoping framework that involved looking at the current energy mix, policies, and potential for future technologies of countries to develop a scenario for creating a sustainable energy system for 9 billion people in 2050 in accordance to meet Paris Agreement targets.
   tags: ["Sustainability"]
+

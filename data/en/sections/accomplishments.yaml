@@ -16,22 +16,22 @@ accomplishments:
   organization:
     name: Delhi Technological University
     url: 
-  courseOverview: "Highest Cumulative Grade Point Average in the Bachelor Program for Environmental Engineering (2017-2021)"
+  courseOverview: Highest Cumulative Grade Point Average in the Bachelor Program for Environmental Engineering (2017-2021)
   # certificateURL: "https://example.com"
 
 - name: Exceptional Research Awards
   timeline: "Jun 2020 - Jan 2021"
   organization:
-    name:
+    name: Delhi Technological University
     url: 
-  courseOverview: "Publications in exceptional peer-review journals for the year 2020 and 2021"
+  courseOverview: Publications in exceptional peer-review journals for the year 2020 and 2021
   # certificateURL: "https://example.com"
 
 - name: Year Topper
-  timeline: "2019-2021"
+  timeline: "2019 - 2021"
   organization:
-    name: 
+    name: Delhi Technological University
     url: 
-  courseOverview: "Highest Cumulative Grade Point Average for the year 2019 and 2020 in Environmental Engineering"
+  courseOverview: Highest Cumulative Grade Point Average for the year 2019 and 2020 in Environmental Engineering
 
 
