@@ -11,24 +11,24 @@ section:
 
 # Your accomplishments
 accomplishments:
-- name: Vice Chancellor Gold Medal
-  timeline: "August 2017 - June 2021"
+- name: Stanford Graduate School of Businesss Ignite Program
+  timeline: "June 20223 - July 2023"
   organization:
-    name: Delhi Technological University
+    name: Stanford University
     url: 
   courseOverview: Highest Cumulative Grade Point Average in the Bachelor Program for Environmental Engineering (2017-2021)
   # certificateURL: "https://example.com"
 
-- name: Exceptional Research Awards
-  timeline: "June 2020 - January 2021"
+- name: Engineer-in-Training 
+  timeline: "Jun 2020 - Jan 2021"
   organization:
     name: Delhi Technological University
     url: 
   courseOverview: Publications in exceptional peer-review journals for the year 2020 and 2021
   # certificateURL: "https://example.com"
 
-- name: Year Topper
-  timeline: "2019 - 2021"
+- name: US Green Building Counil Green Associate
+  timeline: "March 2024-Present"
   organization:
     name: Delhi Technological University
     url: 

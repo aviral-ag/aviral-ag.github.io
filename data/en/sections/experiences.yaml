@@ -105,3 +105,29 @@ experiences:
     end: July 2019
     responsibilities:
     - Identified numerous environmental, social, and health concerns, financing, and policies regarding mine closure in India and globally, and collated the data.
+
+- company:
+    name: Chintan Environmental Research and Action Group
+    url: "https://www.chintan-india.org/"
+    location: Delhi, India
+    logo:
+    overview:
+  positions:
+  - designation: Volunteer
+    start: November 2018
+    end: January 2019
+    responsibilities:
+    - .
+
+- company:
+    name: Global Peace Foundation
+    url: "https://globalpeace.org/category/country/india/"
+    location: Delhi, India
+    logo:
+    overview:
+  positions:
+  - designation: Volunteer
+    start: May 2018
+    end: July 2018
+    responsibilities:
+    - .

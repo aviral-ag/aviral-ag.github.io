@@ -23,7 +23,7 @@ projects:
 - name: Soil Moisture Balance Model
   image: "images/sections/projects/SMB.jpeg"
   timeline: "January 2024 - August 2024"
-  summary: Performed frequency analysis on stream flows and precipitation in northern Ohio using the Vogel et al. (2011) method, utilizing 76 years of data from 133 stream gauges. Assessed the impact of trends on extreme events over the next 20 years for 100- to 500-year return periods through the application of magnification factors and reduced return periods.
+  summary: Developed an R-based soil moisture balance model to simulate daily crop water use and accurately estimate irrigation demand across a 100,000+ acre agricultural basin in California. The model integrated climate, crop, soil, and land use data to dynamically track soil moisture and drive water demand calculations. To evaluate groundwater sustainability, executed MODFLOW 6 simulations using FloPy, modeling various pumping scenarios to assess spatial and temporal stress on the aquifer system. This analysis supported decision-making for one of California’s most over-drafted groundwater basins, providing key insights for sustainable water management strategies under SGMA, including conjunctive use, managed aquifer recharge, and demand reduction planning.
   tags: ["Hydrology"]
 
 - name: CARMA - Startup Simulation Project
