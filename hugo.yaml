@@ -434,22 +434,14 @@ params:
         #   hideDeleted: false
 
     # Enable Analytics
+
+  features:
     analytics:
       enable: true
       services:
-        # Google Analytics
         google:
           id: G-SQQGSMX11Z
-        # # CounterDev
-        # counterDev:
-        #   id: <your counterdev id>
-        # # GoatCounter
-        # goatCounter:
-        #   code: <your goat counter code>
-        # # Matomo / Piwik
-        # matomo:
-        #   instance: matomo.example.com
-        #   siteId: 1 # Or any other number
+
 
     # Enable Support
     support:

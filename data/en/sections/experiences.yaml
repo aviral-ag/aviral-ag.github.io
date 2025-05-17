@@ -19,9 +19,9 @@ experiences:
   positions:
   - designation: Staff Engineer
     start: January 2025
-    end: Present
+    end: March 2025
     responsibilities:
-    - Driving sustainable water supply strategies for Bay Area cities, leading a $5 million, 10 MGD water reuse project to enhance resilience and optimize costs.
+    - Driving sustainable water supply strategies for Bay Area cities, lead analysis of a $5 million, 10 MGD water reuse project to enhance resilience and optimize costs.
 
 - company:
     name: EKI Environment and Water Inc.
@@ -37,7 +37,7 @@ experiences:
     - Streamlined geospatial data for California water districts, optimizing workflows with ArcGIS Pro and Python. Reduced processing time from 2 days to a few hours and improved data accuracy over 20+ years for 5 districts.
     - Independently assessed applied water usage on a 5,000-acre area using 25+ years of land use data for CUP-E and USADR. Compared CropScape and OpenET datasets, analyzing vegetative water use for DWR/UCDANR.
     - Utilized DWR Airborne Electromagnetic (AEM) surveys and borehole datasets to develop coarse fraction profiles across 9 aquifer layers. Generated kriging-based rasters in Surfer for a 130,000-acre water district.
-    - Spearheaded a 2-month project to centralize codebases on GitHub, reducing version conflicts by 40% and cutting deployment time by 20%. Improved team workflows for 10 engineers via Docker and AWS integration.
+    - Spearheaded a 2-month project to centralize codebases on GitHub, reducing version conflicts by 40% and cutting deployment time by 20%. Potential to to improve team workflows for 10 engineers via Docker and AWS integration.
 
 - company:
     name: Jacobs Engineering Group
@@ -65,7 +65,7 @@ experiences:
     end: February 2023
     responsibilities:
     - Analyzed climate change impacts on Central California water infrastructure, using GIS and DWR data to assess basin vulnerabilities, supporting five regional water management plans.
-    - Led a team of 3 in developing a Python script computing a dynamic resilience index for San Luis Obispo County, integrating 10+ data sources on water demand, supply, and climate projections to enhance drought preparedness efforts.
+    - Developed a Python script computing a dynamic resilience index for San Luis Obispo County, integrating 10+ data sources on water demand, supply, and climate projections to enhance drought preparedness efforts.
 
 - company:
     name: Global Projects Center
