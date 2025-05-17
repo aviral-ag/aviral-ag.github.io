@@ -1,6 +1,6 @@
 # section information
 section:
-  name: Awards
+  name: Certifications
   id: accomplishments
   enable: true
   weight: 9
@@ -11,27 +11,27 @@ section:
 
 # Your accomplishments
 accomplishments:
-- name: Stanford Graduate School of Businesss Ignite Program
+- name: Stanford Graduate School of Business Ignite Program
   timeline: "June 20223 - July 2023"
   organization:
-    name: Stanford University
+    name: Stanford University Graduate School of Business
     url: 
-  courseOverview: Highest Cumulative Grade Point Average in the Bachelor Program for Environmental Engineering (2017-2021)
+  courseOverview: Intensive entrepreneurship and innovation program for technical professionals transitioning to business leadership
   # certificateURL: "https://example.com"
 
 - name: Engineer-in-Training 
   timeline: "Jun 2020 - Jan 2021"
   organization:
-    name: Delhi Technological University
+    name: National Council of Examiners for Engineering and Surveying
     url: 
-  courseOverview: Publications in exceptional peer-review journals for the year 2020 and 2021
+  courseOverview: Professional engineering designation earned through rigorous examination and practical training
   # certificateURL: "https://example.com"
 
-- name: US Green Building Counil Green Associate
+- name: US Green Building Council Green Associate
   timeline: "March 2024-Present"
-  organization:
-    name: Delhi Technological University
+  organization: 
+    name: US Green Building Council
     url: 
-  courseOverview: Highest Cumulative Grade Point Average for the year 2019 and 2020 in Environmental Engineering
+  courseOverview: Certification demonstrating core competency in sustainable building practices and LEED principles
 
 

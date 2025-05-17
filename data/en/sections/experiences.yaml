@@ -94,6 +94,20 @@ experiences:
     - Mapped ambient air pollution exposure assessment in a cohort of adult women at 60+ homes in three metropolitan cities – Delhi, Bengaluru, and Mumbai during the summer and winter seasons. Analyzed spatial traffic proxy variables using ArcGIS, Python, and Excel.
 
 - company:
+    name: SUEZ Water Technologies and Solutions
+    url: "https://www.suez.com/en/north-america"
+    location: Bengaluru, India
+    logo:
+    overview:
+  positions:
+  - designation: Engineering Sales Intern
+    start: June 2020
+    end: August 2020
+    responsibilities:
+    - Worked with the Strategy and Marketing Team to identify challenges faced at the water and wastewater treatment by Tier 1 pharmaceutical companies in India in the production of API Drugs and formulation. 
+    - Responsibilities include formulating business plans to tackle existing and upcoming challenges at the site such as ZLD, UPW, and retrofit systems.
+
+- company:
     name: Center for Science and Environment
     url: "https://www.cseindia.org/"
     location: Delhi, India
@@ -104,7 +118,8 @@ experiences:
     start: May 2019
     end: July 2019
     responsibilities:
-    - Identified numerous environmental, social, and health concerns, financing, and policies regarding mine closure in India and globally, and collated the data.
+    - Performed secondary research on Mine Closure and Reclamation in India and Globally. Identified numerous Environmental, Social and Health concerns, Financing, Policies regarding Mine Closure. 
+    - Analyzed decade long reports on mine reclamation presented by Coal India Ltd., a subsidiary of CMPDI, to observe the trends of various parameters and the status of reclamation.
 
 - company:
     name: Chintan Environmental Research and Action Group
@@ -117,7 +132,8 @@ experiences:
     start: November 2018
     end: January 2019
     responsibilities:
-    - .
+    - Worked as a volunteer of the core implementation team for a campaign against plastic pollution- the ‘Plastic Upvaas’ or the ‘Plastic Fast’ Campaign. 
+    - The campaign was in partnership with the Canadian High Commission in India and aimed at motivating consumers to reduce their use of single-use plastics. Actively anchored an awareness session and participated in several awareness drives- interacting with school students and the general public to bring about behavior change.
 
 - company:
     name: Global Peace Foundation
@@ -130,4 +146,5 @@ experiences:
     start: May 2018
     end: July 2018
     responsibilities:
-    - .
+    - Participated in GPF India's two-month interfaith program with 20 diverse students, engaging in discussions and visiting religious sites across New Delhi, where I gained profound insights from faith leaders about universal spiritual values that transcend religious boundaries.
+    - Conducted personal hygiene workshop for students in delhi along with a freeze mob at one of the most crowded places in Delhi on social issues. 
