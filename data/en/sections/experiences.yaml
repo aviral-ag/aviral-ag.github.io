@@ -12,6 +12,17 @@ section:
 experiences:
 
 - company:
+    name: Santa Clara Valley Water District
+    url: "https://www.valleywater.org/"
+    location: San Jose, CA
+    overview:
+  positions:
+  - designation: Assistant Engineer
+    start: June 2025
+    end: Present
+    responsibilities:
+    - Managing interns and supporting program development for recycled water and water master planning, including a 24,000 AFY advanced purification facility in Santa Clara County. Accelerate project success through systematic stakeholder collaboration and consultant coordination.
+
     name: Water Resources Engineering Inc.
     url: "https://wrewater.com/"
     location: San Francisco, CA
@@ -21,7 +32,7 @@ experiences:
     start: January 2025
     end: March 2025
     responsibilities:
-    - Driving sustainable water supply strategies for Bay Area cities, lead analysis of a $5 million, 10 MGD water reuse project to enhance resilience and optimize costs.
+    - Driven sustainable water supply strategies for Bay Area cities, lead analyst for a $5 million, 10 MGD water reuse project to enhance resilience, optimize costs, and manage vendor relationships for data collection and sustainability reporting.
 
 - company:
     name: EKI Environment and Water Inc.
