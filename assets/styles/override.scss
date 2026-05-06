@@ -350,15 +350,21 @@ $about-olive: #4f5d48;
   }
 }
 
-// Hero: Toha fixes #home at 100vh with overflow:hidden and .content height ~60%, which clips the CTA + scroll cue
+// Hero: one full viewport, no “phantom” body scroll from a few extra pixels (100dvh accounts for mobile UI)
 .home {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  height: auto;
-  overflow-x: hidden;
-  overflow-y: visible;
+  height: 100vh;
+  max-height: 100vh;
+  min-height: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  @supports (height: 100dvh) {
+    height: 100dvh;
+    max-height: 100dvh;
+  }
 
   .background {
     position: absolute;
@@ -374,14 +380,15 @@ $about-olive: #4f5d48;
     position: relative;
     top: 0;
     z-index: 1;
-    flex: 1 0 auto;
+    flex: 1 1 auto;
+    min-height: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: auto;
-    padding-top: 5rem;
-    padding-bottom: 2.75rem;
+    padding-top: clamp(3.75rem, 10vh, 5rem);
+    padding-bottom: clamp(1rem, 4vh, 2.75rem);
     max-width: 40rem;
   }
 
@@ -470,8 +477,8 @@ $about-olive: #4f5d48;
 
 @media (max-width: 639.98px) {
   .home .content {
-    padding-top: 4.25rem;
-    padding-bottom: 2rem;
+    padding-top: clamp(3.25rem, 12vw, 4.25rem);
+    padding-bottom: clamp(0.75rem, 3vh, 2rem);
   }
 }
 
