@@ -11,11 +11,12 @@ section:
 
 degrees:
 - name: Masters of Sciences in Civil and Environmental Engineering
-  icon: "assets/images/sections/education/su_logo.jpeg"
+  icon: fa-graduation-cap
   timeframe: 2021-2023
   institution:
-    name: Stanford Univeristy
+    name: Stanford University
     url: "https://www.stanford.edu/"
+    logo: images/sections/education/su_logo.jpeg
   grade: #(optional)
     scale: GPA
     achieved: 3.7
@@ -23,11 +24,12 @@ degrees:
   extracurricularActivities: #(optional)
   - Member of Stanford Cricket Team.
 - name: Bachelor of Technology in Environmental Engineering
-  icon: "assets/images/sections/education/dtu_logo.jpeg"
+  icon: fa-university
   timeframe: 2017-2021
   institution:
     name: Delhi Technological University
     url: "https://www.dtu.ac.in/"
+    logo: images/sections/education/dtu_logo.png
   grade: #(optional)
     scale: CGPA
     achieved: "8.91"
