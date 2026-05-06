@@ -31,7 +31,7 @@ This sample post tests the followings:
 
 ### Tweet Sample
 
-{{< tweet user="SanDiegoZoo" id="1453110110599868418" >}}
+[View tweet on X](https://x.com/SanDiegoZoo/status/1453110110599868418)
 
 {{< vs >}}
 
