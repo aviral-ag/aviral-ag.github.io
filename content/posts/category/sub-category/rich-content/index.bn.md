@@ -1,6 +1,7 @@
 ---
 title: "সমৃদ্ধ কন্টেন্ট"
 date: 2020-06-08T08:06:25+06:00
+draft: true
 description: Sample post with multiple images, embedded video etc.
 menu:
   sidebar:

@@ -2,13 +2,14 @@
 {{ $link := printf "projects/%s/" $slug | relLangURL }}
 {{ $filterCats := "" }}
 {{ with .tags }}{{ $filterCats = delimit (apply . "lower" ".") "," }}{{ end }}
-<div class="col-12 col-md-6 col-xl-4 p-0 px-2 filtr-item d-flex align-items-stretch" data-category='all{{ if $filterCats }}, {{ $filterCats }}{{ end }}'>
+<div class="project-grid-item d-flex align-items-stretch" data-category='all{{ if $filterCats }}, {{ $filterCats }}{{ end }}'>
     <div class="card project-grid-card h-100 w-100">
         {{ if .image }}
         {{ $imageImage := resources.Get .image }}
         {{ if $imageImage }}
         <a href="{{ $link }}" class="project-grid-card-image-link text-decoration-none">
-            {{ $thumb := $imageImage.Fill "800x500 q85" }}
+            {{/* Fit keeps aspect ratio without cropping (letterboxed in fixed frame via CSS) */}}
+            {{ $thumb := $imageImage.Fit "900x560 q85" }}
             <div class="project-grid-card-image-wrap">
                 <img class="project-grid-card-img" src="{{ $thumb.RelPermalink }}" alt="{{ .name }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" loading="lazy" />
             </div>

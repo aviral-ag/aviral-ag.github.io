@@ -10,23 +10,69 @@
 {{ end }}
 
 {{ define "content" }}
+{{ $slug := .File.ContentBaseName }}
+{{ $pd := "" }}
+{{ if (index site.Data site.Language.Lang).sections.projects }}
+  {{ $pd = (index site.Data site.Language.Lang).sections.projects }}
+{{ else if site.Data.sections.projects }}
+  {{ $pd = site.Data.sections.projects }}
+{{ end }}
+{{ $match := "" }}
+{{ with $pd }}
+  {{ $found := where .projects "slug" $slug }}
+  {{ if gt (len $found) 0 }}
+    {{ $match = index $found 0 }}
+  {{ end }}
+{{ end }}
+
 <section class="content-section project-detail-page" id="content-section">
   <div class="content">
     <div class="container p-0 read-area">
       <div class="page-content project-detail-page-content">
-        <p class="project-detail-back mb-0 pt-4 ps-3 pe-3">
-          <a href="{{ "/" | relLangURL }}#projects" class="link-primary text-decoration-none">&larr; Back to projects</a>
-        </p>
-        <div class="title">
-          <h1>{{ .Title }}</h1>
-        </div>
-        {{ with .Params.tags }}
-        <div class="tags project-detail-tags mb-2">
-          {{ range . }}<span class="badge bg-secondary me-1">{{ . }}</span>{{ end }}
-        </div>
-        {{ end }}
-        <div class="post-content" id="post-content">
-          {{ .Content }}
+        <div class="project-detail-shell">
+          <a href="{{ "/" | relLangURL }}#projects" class="project-detail-back-link">
+            <span class="project-detail-back-icon" aria-hidden="true"><i class="fas fa-arrow-left"></i></span>
+            <span>Back to projects</span>
+          </a>
+
+          {{ with $match }}
+            {{ with .image }}
+              {{ $cover := resources.Get . }}
+              {{ if $cover }}
+                {{ $cov := $cover.Fit "1400x720 q85" }}
+                <div class="project-detail-cover">
+                  <img class="project-detail-cover-img" src="{{ $cov.RelPermalink }}" alt="" width="{{ $cov.Width }}" height="{{ $cov.Height }}" loading="lazy" />
+                </div>
+              {{ end }}
+            {{ end }}
+          {{ end }}
+
+          <header class="project-detail-header">
+            <h1 class="project-detail-title">{{ .Title }}</h1>
+            <div class="project-detail-meta">
+              {{ if and $match $match.timeline }}
+                <span class="project-detail-meta-item"><i class="far fa-calendar-alt" aria-hidden="true"></i>{{ $match.timeline }}</span>
+              {{ else if .Date }}
+                <span class="project-detail-meta-item"><i class="far fa-calendar-alt" aria-hidden="true"></i>{{ .Date | time.Format ":date_long" }}</span>
+              {{ end }}
+            </div>
+            {{ if .Description }}
+              <p class="project-detail-lede">{{ .Description }}</p>
+            {{ else if $match }}
+              {{ with $match.excerpt }}<p class="project-detail-lede">{{ . }}</p>{{ end }}
+            {{ end }}
+            {{ with .Params.tags }}
+              <div class="project-detail-tags" aria-label="Topics">
+                {{ range . }}<span class="project-detail-tag">{{ . }}</span>{{ end }}
+              </div>
+            {{ end }}
+          </header>
+
+          <div class="project-detail-divider" role="presentation"></div>
+
+          <article class="post-content project-detail-prose" id="post-content">
+            {{ .Content }}
+          </article>
         </div>
       </div>
     </div>

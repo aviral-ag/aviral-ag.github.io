@@ -1,0 +1,33 @@
+{{ $sectionID := replace (lower .section.name) " " "-" }}
+{{ if .section.id }}
+  {{ $sectionID = .section.id }}
+{{ end }}
+
+<div class="container-fluid anchor pb-5 accomplishments-section accomplishments-minimal-section experience-minimal-section">
+  <div class="container accomplishments-minimal-container">
+    <h1 class="accomplishments-minimal-heading">
+      <span id="{{ $sectionID }}"></span>{{ .section.name }}
+    </h1>
+    <ul class="list-unstyled accomplishments-minimal-list mb-0">
+      {{ range .experiences }}
+        {{ $company := .company }}
+        {{ $pos := index .positions 0 }}
+        <li class="accomplishments-minimal-item">
+          <div class="accomplishments-minimal-title-row">
+            <div class="accomplishments-minimal-name">{{ $pos.designation }}</div>
+            <div class="accomplishments-minimal-year experience-minimal-dates">
+              {{ $pos.start }} – {{ if $pos.end }}{{ $pos.end }}{{ else }}{{ i18n "present" }}{{ end }}
+            </div>
+          </div>
+          <div class="accomplishments-minimal-org">
+            {{ if $company.url }}
+              <a href="{{ $company.url }}" target="_blank" rel="noopener">{{ $company.name }}</a>
+            {{ else }}
+              {{ $company.name }}
+            {{ end }}
+          </div>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+</div>

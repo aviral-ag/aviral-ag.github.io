@@ -6,14 +6,6 @@ section:
   weight: 5
   showOnNavbar: true
 
-buttons:
-- name: All
-  filter: "all"
-- name: Hydrology
-  filter: "hydrology"
-- name: Sustainability
-  filter: "sustainability"
-
 projects:
 
 - name: Soil Moisture Balance Model

@@ -9,17 +9,6 @@ section:
   # Can optionally hide the title in sections
   # hideTitle: true
 
-# filter buttons
-buttons:
-- name: সব বিষয়
-  filter: "all"
-- name: প্রোফেসনাল
-  filter: "professional"
-- name: প্রাতিষ্ঠানিক
-  filter: "academic"
-- name: শখের প্রোজেক্ট
-  filter: "hobby"
-
 # your projects
 projects:
 - name: Kubernetes

@@ -1,0 +1,33 @@
+{{ $sectionID := replace (lower .section.name) " " "-" }}
+{{ if .section.id }}
+  {{ $sectionID = .section.id }}
+{{ end }}
+
+<div class="container-fluid anchor pb-5 accomplishments-section accomplishments-minimal-section">
+  <div class="container accomplishments-minimal-container">
+    <h1 class="accomplishments-minimal-heading">
+      <span id="{{ $sectionID }}"></span>{{ .section.name }}
+    </h1>
+    <ul class="list-unstyled accomplishments-minimal-list mb-0">
+      {{ range .accomplishments }}
+        <li class="accomplishments-minimal-item">
+          <div class="accomplishments-minimal-title-row">
+            <div class="accomplishments-minimal-name">{{ .name }}</div>
+            <div class="accomplishments-minimal-year">
+              {{ partial "helpers/accomplishment-year.html" . }}
+            </div>
+          </div>
+          <div class="accomplishments-minimal-org">
+            {{ with .organization }}
+              {{ if .url }}
+                <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
+              {{ else }}
+                {{ .name }}
+              {{ end }}
+            {{ end }}
+          </div>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+</div>

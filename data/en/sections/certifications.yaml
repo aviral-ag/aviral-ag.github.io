@@ -1,12 +1,11 @@
 # section information
 section:
   name: Certifications
-  id: accomplishments
+  id: certifications
   enable: true
-  weight: 9
+  weight: 11
   showOnNavbar: true
-  # Can optionally hide the title in sections
-  # hideTitle: true
+  template: sections/accomplishments.html
 
 
 # Your accomplishments

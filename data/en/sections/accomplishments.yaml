@@ -1,12 +1,11 @@
 # section information
 section:
   name: Awards
-  id: accomplishments
+  id: awards
   enable: true
-  weight: 9
+  weight: 10
   showOnNavbar: true
-  # Can optionally hide the title in sections
-  # hideTitle: true
+  template: sections/accomplishments.html
 
 
 # Your accomplishments

@@ -3,10 +3,9 @@ section:
   name: Blog
   id: recent-posts
   enable: true
-  weight: 8
+  weight: 13
   showOnNavbar: true
-  numShow: 6
+  numShow: 1
   showMoreButton: true
-  # hideTitle: true
 
-# Lists recent posts from content/posts/; “View all” links to /posts/
+# Lists recent posts from content/posts/ (numShow: 1); “View all” links to /posts/

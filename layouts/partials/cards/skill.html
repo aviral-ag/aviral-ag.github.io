@@ -1,0 +1,49 @@
+{{ $skill := . }}
+<div
+  class="skill-pill filtr-item"
+  data-category='all, {{ with .categories }}{{ delimit . "," }}{{ end }}'
+>
+  <span class="skill-pill-icon" aria-hidden="true">
+    {{ if .logo }}
+      {{ $path := strings.TrimLeft "/" .logo }}
+      {{ $ext := path.Ext $path | lower }}
+      {{ if $path }}
+        {{ with resources.Get $path }}
+          {{ if eq $ext ".svg" }}
+            <img
+              class="skill-pill-img skill-pill-img--vector"
+              src="{{ .RelPermalink }}"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          {{ else if or (eq $ext ".gif") (eq $ext ".webp") }}
+            <img class="skill-pill-img" src="{{ .RelPermalink }}" alt="" loading="lazy" decoding="async" />
+          {{ else if or (eq $ext ".png") (eq $ext ".jpg") (eq $ext ".jpeg") }}
+            {{ $thumb := .Fit "256x256 q92" }}
+            <img
+              class="skill-pill-img"
+              src="{{ $thumb.RelPermalink }}"
+              alt=""
+              width="{{ $thumb.Width }}"
+              height="{{ $thumb.Height }}"
+              loading="lazy"
+              decoding="async"
+            />
+          {{ else }}
+            <img class="skill-pill-img" src="{{ .RelPermalink }}" alt="" loading="lazy" decoding="async" />
+          {{ end }}
+        {{ else }}
+          <span class="skill-pill-initial">{{ substr $skill.name 0 1 }}</span>
+        {{ end }}
+      {{ else }}
+        <span class="skill-pill-initial">{{ substr $skill.name 0 1 }}</span>
+      {{ end }}
+    {{ else if .icon }}
+      <i class="{{ .icon }} skill-pill-fa" aria-hidden="true"></i>
+    {{ else }}
+      <span class="skill-pill-initial">{{ substr .name 0 1 }}</span>
+    {{ end }}
+  </span>
+  <span class="skill-pill-label">{{ .name }}</span>
+</div>

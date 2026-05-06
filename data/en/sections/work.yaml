@@ -1,0 +1,72 @@
+# Professional / industry roles — shown as "Work"
+section:
+  name: Work
+  id: work
+  enable: true
+  weight: 3
+  showOnNavbar: true
+  template: sections/experiences.html
+
+# Optional: company.logo: images/sections/experiences/your-logo.png (under /assets)
+
+experiences:
+
+- company:
+    name: Santa Clara Valley Water District
+    url: "https://www.valleywater.org/"
+    location: San Jose, CA
+    overview:
+  positions:
+  - designation: Assistant Engineer
+    start: June 2025
+    end: Present
+    responsibilities:
+    - Led recycled-water and master-planning work for a 24,000 AFY advanced purification program, coordinating stakeholders and consultants across Santa Clara County.
+
+- company:
+    name: Water Resources Engineering Inc.
+    url: "https://wrewater.com/"
+    location: San Francisco, CA
+    overview:
+  positions:
+  - designation: Staff Engineer
+    start: January 2025
+    end: March 2025
+    responsibilities:
+    - Drove Bay Area water reuse strategy as lead analyst on a $5M, 10 MGD reuse project—vendor data, sustainability reporting, and resilience planning.
+
+- company:
+    name: EKI Environment and Water Inc.
+    url: "https://www.ekiconsult.com/"
+    location: Daly City, CA
+    overview:
+  positions:
+  - designation: Environmental Engineer
+    start: July 2023
+    end: October 2024
+    responsibilities:
+    - Built R-based soil moisture and MODFLOW 6 modeling for a 100,000+ acre basin; streamlined GIS/Python workflows for five California water districts.
+
+- company:
+    name: Jacobs Engineering Group
+    url: "https://www.jacobs.com/"
+    location: San Francisco, CA
+    overview:
+  positions:
+  - designation: Environmental, Health and Safety - Information Management Intern
+    start: June 2022
+    end: March 2023
+    responsibilities:
+    - Contributed to a global carbon sequestration tool and delivered Power BI dashboards that cut EHS reporting time for multi-site stakeholders.
+
+- company:
+    name: SUEZ Water Technologies and Solutions
+    url: "https://www.suez.com/en/north-america"
+    location: Bengaluru, India
+    overview:
+  positions:
+  - designation: Engineering Sales Intern
+    start: June 2020
+    end: August 2020
+    responsibilities:
+    - Strategy and marketing analysis for pharma water treatment (ZLD, UPW, retrofits) with the India sales team.

@@ -6,7 +6,6 @@ section:
   enable: true
   weight: 4
   showOnNavbar: true
-  # hideTitle: true
 
 degrees:
 - name: Masters of Sciences in Civil and Environmental Engineering

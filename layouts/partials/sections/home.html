@@ -108,25 +108,75 @@
         {{ if $author.subtitle }}
         <h2 class="greeting-subtitle">{{ $author.subtitle }}</h2>
         {{ end }}
+        {{ if $author.summary }}
         <div class="typing-carousel">
             <span id="ityped" class="ityped"></span>
             <span class="ityped-cursor"></span>
         </div>
         <ul id="typing-carousel-data">
-            {{ if $author.summary }}
             {{ range $author.summary }}
             <li>{{ . }}</li>
-            {{ end}}
             {{ end }}
         </ul>
+        {{ end }}
+        {{/* Icon row: resume + socials + coffee — same data as About (`data/<lang>/sections/about.yaml`) */}}
+        {{- $aboutScratch := newScratch -}}
+        {{- with index site.Data site.Language.Lang -}}
+          {{- with .sections -}}
+            {{- with index . "about" -}}
+              {{- $aboutScratch.Set "data" . -}}
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
+        {{- $aboutData := $aboutScratch.Get "data" -}}
+        {{- if $aboutData -}}
+        {{- $coffeeScratch := newScratch -}}
+        {{- $coffeeScratch.Set "url" "https://calendly.com/aviralag-alumni/coffeechat" -}}
+        {{- range $aboutData.resourceLinks -}}
+          {{- if strings.Contains (lower .title) "coffee" -}}
+            {{- $coffeeScratch.Set "url" .url -}}
+          {{- end -}}
+        {{- end -}}
+        {{- $coffeeURL := $coffeeScratch.Get "url" -}}
+        <ul class="home-hero-icon-row d-flex flex-wrap align-items-center justify-content-center" role="list">
+          {{- range $aboutData.resourceLinks -}}
+            {{- if not (strings.Contains (lower .title) "coffee") -}}
+            {{- $href := .url -}}
+            {{- if not (hasPrefix $href "http") }}{{ $href = relURL $href }}{{ end -}}
+            <li role="listitem">
+              <a class="home-hero-icon-link" href="{{ $href }}" title="{{ .title }}" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-file-lines" aria-hidden="true"></i>
+                <span class="visually-hidden">{{ .title }}</span>
+              </a>
+            </li>
+            {{- end -}}
+          {{- end -}}
+          {{- range $aboutData.socialLinks -}}
+            <li role="listitem">
+              {{- if eq .name "Email" -}}
+              <a class="home-hero-icon-link" href="mailto:{{ .url }}" title="{{ .name }}" rel="noopener"><i class="{{ .icon }}" aria-hidden="true"></i><span class="visually-hidden">{{ .name }}</span></a>
+              {{- else if eq .name (i18n "phone") -}}
+              <a class="home-hero-icon-link" href="tel:{{ .url }}" title="{{ .name }}" rel="noopener"><i class="{{ .icon }}" aria-hidden="true"></i><span class="visually-hidden">{{ .name }}</span></a>
+              {{- else -}}
+              <a class="home-hero-icon-link" href="{{ .url }}" title="{{ .name }}" target="_blank" rel="noopener"><i class="{{ .icon }}" aria-hidden="true"></i><span class="visually-hidden">{{ .name }}</span></a>
+              {{- end -}}
+            </li>
+          {{- end -}}
+          <li role="listitem">
+            <a class="home-hero-icon-link" href="{{ $coffeeURL }}" title="Schedule a coffee chat" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-mug-hot" aria-hidden="true"></i>
+              <span class="visually-hidden">Schedule a coffee chat</span>
+            </a>
+          </li>
+        </ul>
+        {{- end -}}
         {{ if $sections }}
         {{ range first 1 (where (sort $sections "section.weight") ".section.enable" true) }}
         {{ $sectionID := replace (lower .section.name) " " "-" }}
         {{ if .section.id }}
         {{ $sectionID = .section.id }}
         {{ end }}
-        <a href="#{{ $sectionID }}" class="arrow-center" aria-label="{{ i18n " read" }} {{ i18n "more" }} - {{ $name
-            }}"><i class="arrow bounce fa fa-chevron-down"></i></a>
+        <a href="#{{ $sectionID }}" class="arrow-center" aria-label="{{ i18n "read" }} {{ i18n "more" }} - {{ $name }}"><i class="arrow bounce fa fa-chevron-down"></i></a>
         {{ end }}
         {{ end }}
     </div>

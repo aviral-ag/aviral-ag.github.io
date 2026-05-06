@@ -1,0 +1,34 @@
+# Volunteering (minimal list — same layout as Awards)
+section:
+  name: Volunteering
+  id: volunteer
+  enable: true
+  weight: 9
+  showOnNavbar: true
+  template: sections/experience-minimal.html
+
+experiences:
+
+- company:
+    name: Chintan Environmental Research and Action Group
+    url: "https://www.chintan-india.org/"
+    location: Delhi, India
+    overview:
+  positions:
+  - designation: Volunteer
+    start: November 2018
+    end: January 2019
+    responsibilities:
+    - Core team for the Plastic Upvaas campaign with the Canadian High Commission—awareness drives and behavior-change workshops.
+
+- company:
+    name: Global Peace Foundation
+    url: "https://globalpeace.org/category/country/india/"
+    location: Delhi, India
+    overview:
+  positions:
+  - designation: Volunteer
+    start: May 2018
+    end: July 2018
+    responsibilities:
+    - Interfaith leadership program and community hygiene / social-issue outreach in New Delhi.

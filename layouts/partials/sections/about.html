@@ -1,0 +1,75 @@
+{{ $sectionID := replace (lower .section.name) " " "-" }}
+{{ if .section.id }}
+  {{ $sectionID = .section.id }}
+{{ end }}
+
+{{ $author:= site.Data.author }}
+{{ if (index site.Data site.Language.Lang).author }}
+  {{ $author = (index site.Data site.Language.Lang).author }}
+{{ end }}
+
+<div class="container anchor p-lg-5 about-section">
+  <h1 class="section-heading-page about-section-heading">
+    <span id="{{ $sectionID }}"></span>{{ .section.name }}
+  </h1>
+  <div class="row pt-sm-2 pt-md-4 align-self-center">
+    <!-- summary -->
+    <!-- takes up full section width if no badges/soft skills are specified -->
+    {{ if or (.softSkills) (.badges) }} <div class="col-sm-6"> {{ else }} <div class="col-sm-12"> {{ end }}
+      <h3 class="p-1">{{ $author.name }}</h3>
+      {{ if .designation }}
+      <h5 class="p-1">
+        {{ .designation }}
+        {{ if .company }}
+        {{ i18n "at"}} <a href="{{ .company.url }}" title="{{ .company.name }}" target="_blank" rel="noopener">{{ .company.name }}</a>
+        {{ end }}
+      </h5>
+      {{ end }}
+      <p class="p-1 text-justify">
+        {{ .summary | markdownify }}
+      </p>
+
+      <div class="about-actions">
+        <ul class="social-link d-flex flex-wrap align-items-center about-social-links">
+          {{ range .socialLinks }}
+          <li>
+            {{ if eq .name "Email" }}
+              <a href="mailto:{{ .url }}" title="{{ .name }}" target="_blank" rel="{{.rel | default "noopener"}}"><i class="{{ .icon }}" aria-hidden="true"></i></a>
+            {{ else if eq .name (i18n "phone") }}
+              <a href="tel:{{ .url }}" title="{{ .name }}" target="_blank" rel="{{.rel | default "noopener"}}"><i class="{{ .icon }}" aria-hidden="true"></i></a>
+            {{ else }}
+              <a href="{{ .url }}" title="{{ .name }}" target="_blank" rel="{{.rel | default "noopener"}}"><i class="{{ .icon }}" aria-hidden="true"></i></a>
+            {{ end }}
+          </li>
+          {{ end }}
+        </ul>
+
+        <div class="about-button-row d-flex flex-wrap align-items-center gap-2">
+          {{ if .resume }}
+          <a class="btn btn-dark" href="{{ .resume | relURL }}" title="{{ i18n "resume"}}" target="_blank" rel="noopener noreferrer">{{ i18n "resume"}}</a>
+          {{ end }}
+          {{ range .resourceLinks }}
+          {{ $href := .url }}
+          {{ if not (hasPrefix $href "http") }}
+            {{ $href = relURL $href }}
+          {{ end }}
+          <a class="btn btn-dark" href="{{ $href }}" title="{{ .title }}" target="_blank" rel="noopener noreferrer">{{ .title }}</a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+    <!-- soft skills circular-progressbar -->
+    <div class="col-sm-6 pt-5 ps-md-4 ps-sm-3 pt-sm-0">
+      <div class="row">
+        {{ range .badges }}
+          {{ partial "misc/badge.html" . }}
+        {{ end }}
+        <!-- TODO: Remove this part in version v4+ -->
+        <!-- Keep backward compatibility with old configuration -->
+        {{ range .softSkills }}
+          {{ partial "misc/soft-skills.html" . }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>

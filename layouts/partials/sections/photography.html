@@ -4,13 +4,10 @@
 {{ end }}
 
 <div class="container-fluid anchor pb-5 photography-section">
-  {{ if not (.section.hideTitle) }}
-    <h1 class="text-center">
+  <div class="container">
+    <h1 class="section-heading-page">
         <span id="{{ $sectionID }}"></span>{{ .section.name }}</h1>
-  {{ else }}
-    <h1 class="text-center" style="display: none">
-        <span id="{{ $sectionID }}"></span>{{ .section.name }}</h1>
-  {{ end }}
+  </div>
 
   <div class="container">
     <div class="row g-4 photography-grid">
@@ -21,15 +18,15 @@
           {{ if $img }}
           {{ $thumb := $img.Fill "1200x800 q85" }}
           <div class="photography-image-wrap">
-            <img class="photography-img" src="{{ $thumb.RelPermalink }}" alt="{{ .title }}" loading="lazy" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" />
+            <img class="photography-img" src="{{ $thumb.RelPermalink }}" alt="{{ if .alt }}{{ .alt }}{{ else if .title }}{{ .title }}{{ else }}Photography{{ end }}" loading="lazy" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" />
           </div>
           {{ end }}
+          {{ if or .title .caption }}
           <div class="card-body">
-            <h5 class="card-title mb-1">{{ .title }}</h5>
-            {{ if .caption }}
-            <p class="card-text text-muted small mb-0">{{ .caption }}</p>
-            {{ end }}
+            {{ if .title }}<h5 class="card-title mb-1">{{ .title }}</h5>{{ end }}
+            {{ if .caption }}<p class="card-text text-muted small mb-0">{{ .caption }}</p>{{ end }}
           </div>
+          {{ end }}
         </div>
       </div>
       {{ end }}
