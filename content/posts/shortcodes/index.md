@@ -227,7 +227,7 @@ erDiagram
 
 ## Gist
 
-{{< gist hossainemruz 4ad86c9b6378677e14eff12713e75e44 >}}
+[View the gist on GitHub](https://gist.github.com/hossainemruz/4ad86c9b6378677e14eff12713e75e44)
 
 ## Embedded PDF
 
