@@ -17,12 +17,11 @@ degrees:
     url: "https://www.stanford.edu/"
     logo: images/sections/education/SU_Seal_Red.png
     darkLogo: images/sections/education/SU_Seal_Black.png
-  grade: #(optional)
-    scale: GPA
-    achieved: 3.7
-    outOf: 4.0
+
   extracurricularActivities: #(optional)
   - Member of Stanford Cricket Team.
+  - Social Dancing, Golf and Advanced Swimming
+
 - name: Bachelor of Technology in Environmental Engineering
   icon: fa-graduation-cap
   timeframe: 2017-2021
@@ -30,17 +29,6 @@ degrees:
     name: Delhi Technological University
     url: "https://www.dtu.ac.in/"
     logo: images/sections/education/dtu_logo.png
-  grade: #(optional)
-    scale: CGPA
-    achieved: "8.91"
-    outOf: "10 (Gold Medalist)"
-  publications: #(optional)
-  - title: Financial viability assessment of concentrated solar power technologies under Indian climatic conditions. Sustainable Energy Technologies and Assessments, 100928
-    url: "https://doi.org/10.1016/j.seta.2020.100928"
-  - title: Predicting Ground Level PM2.5 Concentration Over Delhi Using Landsat 8 Satellite Data. International Journal of Remote Sensing, 42(3), 827-838.
-    url: "https://doi.org/10.1080/2150704X.2020.1832279"
-  - title: Comparative study on air quality status in Indian and Chinese cities before and during the COVID-19 lockdown period. Air Quality, Atmosphere and Health, 13(10), 1167–1178.
-    url: "https://doi.org/10.1007/s11869-020-00881-z"
   extracurricularActivities: #(optional)
   - President, DTU Toastmasters
   - Creative Head, Entrepreneurship Cell DTU 

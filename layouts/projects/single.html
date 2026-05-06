@@ -1,0 +1,41 @@
+{{ define "header" }}
+<meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Title }}{{ end }}" />
+{{ end }}
+
+{{ define "navbar" }}
+    {{ partial "navigators/navbar.html" . }}
+{{ end }}
+
+{{ define "sidebar" }}
+{{ end }}
+
+{{ define "content" }}
+<section class="content-section project-detail-page" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      <div class="page-content project-detail-page-content">
+        <p class="project-detail-back mb-0 pt-4 ps-3 pe-3">
+          <a href="{{ "/" | relLangURL }}#projects" class="link-primary text-decoration-none">&larr; Back to projects</a>
+        </p>
+        <div class="title">
+          <h1>{{ .Title }}</h1>
+        </div>
+        {{ with .Params.tags }}
+        <div class="tags project-detail-tags mb-2">
+          {{ range . }}<span class="badge bg-secondary me-1">{{ . }}</span>{{ end }}
+        </div>
+        {{ end }}
+        <div class="post-content" id="post-content">
+          {{ .Content }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <a id="scroll-to-top" class="btn" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Scroll to top">
+    <i class="fas fa-chevron-circle-up"></i>
+  </a>
+</section>
+{{ end }}
+
+{{ define "toc" }}
+{{ end }}

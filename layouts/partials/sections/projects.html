@@ -3,7 +3,7 @@
 {{ $sectionID = .section.id }}
 {{ end }}
 
-<div class="container-fluid anchor pb-5 projects-section" id="{{ $sectionID }}">
+<div class="container-fluid anchor pb-5 projects-section">
     {{ if not (.section.hideTitle) }}
     <h1 class="text-center">
         <span id="{{ $sectionID }}"></span>{{ .section.name }}
@@ -22,8 +22,8 @@
             {{ end }}
         </div>
     </div>
-    <div class="container filter-publications">
-        <div class="row" id="publication-card-holder">
+    <div class="container filtr-projects">
+        <div class="row g-4" id="project-card-holder">
             {{ range .projects }}
             {{ partial "cards/project" . }}
             {{ end }}

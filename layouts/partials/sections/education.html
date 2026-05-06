@@ -36,7 +36,9 @@
                             {{ $darkLogoImage:= resources.Get .institution.darkLogo}}
                             {{ if $logoImage }}
                             <div class="education-logo-col flex-shrink-0">
-                            <div class="logo-holder education-card-logo-holder mb-0">
+                            {{ $logoHolderClass := "logo-holder education-card-logo-holder mb-0" }}
+                            {{ if in (lower .institution.name) "stanford" }}{{ $logoHolderClass = printf "%s %s" $logoHolderClass "education-logo-stanford" }}{{ end }}
+                            <div class="{{ $logoHolderClass }}">
                                 <img class="company-logo light-logo" src="{{ $logoImage.RelPermalink }}" alt="{{ .name }}" />
                                 {{ if $darkLogoImage }}
                                 <img class="company-logo dark-logo" src="{{ $darkLogoImage.RelPermalink }}" alt="{{ .name }}" />
