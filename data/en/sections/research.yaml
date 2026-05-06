@@ -1,58 +1,123 @@
-# Research (minimal list — same layout as Awards)
+# Research: experience + publications (single section / navbar entry)
 section:
   name: Research
   id: research
   enable: true
-  weight: 8
+  weight: 6
   showOnNavbar: true
-  template: sections/experience-minimal.html
+  template: sections/research-publications.html
 
 experiences:
 
 - company:
     name: The Bill Lane Center for the American West - Stanford University
-    url: "https://west.stanford.edu/"
     location: Stanford, CA
     overview:
   positions:
   - designation: Research Assistant
     start: September 2021
     end: February 2023
+    authors: "Aviral Agarwal, Aman Kaushik, Sankalp Kumar, Dr. Rajeev Kumar Mishra"
+    paper:
+      title: "Comparative study on air quality status in Indian and Chinese cities (Atmosphere and Health, 2020)"
     responsibilities:
     - GIS and DWR-based climate vulnerability work for Central California water plans; Python resilience index for SLO County drought preparedness.
 
 - company:
     name: Global Projects Center
-    url: "https://gpc.stanford.edu/"
     location: Stanford, CA
     overview:
   positions:
   - designation: Research Fellow
     start: September 2021
     end: December 2022
+    authors: "Aviral Agarwal, Sankalp Kumar, Dr. Anil Kumar"
+    paper:
+      title: "Financial viability assessment of concentrated solar power technologies under Indian climatic conditions (SETA, 2020)"
     responsibilities:
     - Explored dynamically priced urban data marketplaces in the Digital Cities program at Stanford.
 
 - company:
     name: Indian Institute of Technology, Bombay
-    url: "https://www.iitb.ac.in/"
     location: Mumbai, India
     overview:
   positions:
   - designation: Research Intern
     start: December 2019
     end: January 2021
+    authors: "Dr. Rajeev Kumar Mishra, Aviral Agarwal, Ankita Shukla"
+    paper:
+      title: "Predicting ground level PM2.5 concentration over Delhi using Landsat 8 satellite data (IJRS, 2020)"
     responsibilities:
     - Air pollution exposure mapping across three Indian metros using ArcGIS, Python, and cohort field data.
 
 - company:
     name: Center for Science and Environment
-    url: "https://www.cseindia.org/"
     location: Delhi, India
     overview:
   positions:
   - designation: Policy Research Intern
     start: May 2019
     end: July 2019
+    authors: "Aviral Agarwal"
+    paper:
+      title: "CSE — policy and environment research"
     responsibilities:
     - Mine closure and reclamation policy research; trend analysis of Coal India reclamation reporting.
+
+publications:
+- title: Financial viability assessment of concentrated solar power technologies under Indian climatic conditions.
+  publishedIn:
+    name: Sustainable Energy Technologies and Assessments
+    date: 2020
+    url: https://doi.org/10.1016/j.seta.2020.100928
+  authors:
+  - name: Sankalp Kumar
+    url:
+  - name: Aviral Agarwal
+    url:
+  - name: Dr. Anil Kumar
+    url:
+  paper:
+    summary: The study identifies Jodhpur as the optimal location for a 50 MW Solar Power Tower CSP plant in India, with the lowest LCOE and highest NPV, aiding in technology and investment decisions.
+    url: https://doi.org/10.1016/j.seta.2020.100928
+  categories: ["Energy"]
+  tags: ["Solar Energy", "Techno-Economic"]
+
+- title: Comparative study on air quality status in Indian and Chinese cities before and during the COVID-19 lockdown period. Air Quality
+  publishedIn:
+    name: Atmosphere and Health, 13(10), 1167–1178
+    date: 2020
+    url: https://doi.org/10.1007/s11869-020-00881-z
+  authors:
+  - name: Aviral Agarwal
+    url:
+  - name: Aman Kaushik
+    url:
+  - name: Sankalp Kumar
+    url:
+  - name: Dr. Rajeev Kumar Mishra
+    url:
+  paper:
+    summary: Lockdown measures during COVID-19 significantly reduced AQI levels of PM2.5 and NO2 in major cities of India and China, highlighting effective pathways for air pollution mitigation.
+    url: https://doi.org/10.1007/s11869-020-00881-z
+  categories: ["image-processing"]
+  tags: ["Air Pollution", "COVID-19", "PM 2.5", "NO3"]
+
+- title: Predicting Ground Level PM2.5 Concentration Over Delhi Using Landsat 8 Satellite Data
+  publishedIn:
+    name: International Journal of Remote Sensing, 42(3), 827-838
+    date: 2020
+    url: https://doi.org/10.1080/2150704X.2020.1832279
+  authors:
+  - name: Dr. Rajeev Kumar Mishra
+    url:
+  - name: Aviral Agarwal
+    url:
+  - name: Ankita Shukla
+    url:
+  paper:
+    summary: A multispectral empirical model using Landsat 8 data effectively estimates PM2.5 concentrations in Delhi with adequate accuracy, correlating satellite reflectance with in-situ measurements and meteorological data.
+    url: https://doi.org/10.1080/2150704X.2020.1832279
+  categories: ["security"]
+  tags: ["Air Pollution", "Remote Sensing", "PM 2.5"]

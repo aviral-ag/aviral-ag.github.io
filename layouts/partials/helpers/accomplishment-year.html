@@ -1,9 +1,5 @@
-{{- $y := .year | default "" -}}
-{{- if $y -}}
-  {{- $y -}}
+{{- with .year -}}
+  {{- . -}}
 {{- else -}}
-  {{- $m := findRE `(?:19|20)\d{2}` (.timeline | default "") -}}
-  {{- if gt (len $m) 0 -}}
-    {{- index $m (sub (len $m) 1) -}}
-  {{- end -}}
+  {{- partial "helpers/format-timeline-range.html" (.timeline | default "") -}}
 {{- end -}}

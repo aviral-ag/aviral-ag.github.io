@@ -1,0 +1,6 @@
+{{- $endStr := strings.TrimSpace (.end | default "") -}}
+{{- if $endStr -}}
+  {{- partial "helpers/abbrev-month-year.html" $endStr -}}
+{{- else -}}
+  {{- i18n "present" -}}
+{{- end -}}

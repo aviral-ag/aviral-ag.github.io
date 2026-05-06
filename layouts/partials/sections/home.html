@@ -26,27 +26,22 @@
 {{ end }}
 {{ $authorImage := resources.Get $authorImage }}
 
-{{/* Apply image processing, but avoid using "Fit" on SVG or GIF images */}}
-{{ if and $authorImage (and (ne $authorImage.MediaType.SubType "svg") ( ne $authorImage.MediaType.SubType "gif")) }}
+{{ if and $authorImage (and (ne $authorImage.MediaType.SubType "svg") (ne $authorImage.MediaType.SubType "gif")) }}
 {{ $authorImage = $authorImage.Fit "1000x1000 q100" }}
 {{ end }}
 
-{{/* Get the file for background image */}}
 {{ $src := resources.Get $backgroundImage }}
 
-{{/* Set image sizes, targeting widths for different screen sizes */}}
 {{ $tinyw := default "800x" }}
 {{ $smallw := default "800x" }}
 {{ $mediumw := default "1200x" }}
 {{ $largew := default "1500x" }}
 
-{{/* Resize the background image to the given sizes, while maintaining quality */}}
 {{ $tiny := $src.Resize (printf "%s q100" $tinyw) }}
 {{ $small := $src.Resize (printf "%s q100" $smallw) }}
 {{ $medium := $src.Resize (printf "%s q100" $mediumw) }}
 {{ $large := $src.Resize (printf "%s q100" $largew) }}
 
-{{/* Avoid upscaling small images, using original size if the source image is smaller */}}
 {{ if lt $src.Width "500" }}
 {{ $tiny = $src }}
 {{ end }}
@@ -63,35 +58,47 @@
 {{ $large = $src }}
 {{ end }}
 
+{{- $aboutScratch := newScratch -}}
+{{- with index site.Data site.Language.Lang -}}
+  {{- with .sections -}}
+    {{- with index . "about" -}}
+      {{- $aboutScratch.Set "data" . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $aboutData := $aboutScratch.Get "data" -}}
+{{- $coffeeScratch := newScratch -}}
+{{- $coffeeScratch.Set "url" "https://calendly.com/aviralag-alumni/coffeechat" -}}
+{{- with $aboutData -}}
+  {{- range .resourceLinks -}}
+    {{- if strings.Contains (lower .title) "coffee" -}}
+      {{- $coffeeScratch.Set "url" .url -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $coffeeURL := $coffeeScratch.Get "url" -}}
+{{- $avail := $author.availableForWork | default true -}}
+
 <div class="container-fluid home" id="home">
     <style>
-        /* Background image adjustments based on screen size */
         #homePageBackgroundImageDivStyled {
             background-image: url('{{ $tiny.RelPermalink }}');
         }
-
-        /* Adjust for screen sizes between 500px and 800px */
         @media (min-width: 500px) and (max-width: 800px) {
             #homePageBackgroundImageDivStyled {
                 background-image: url('{{ $small.RelPermalink }}');
             }
         }
-
-        /* Adjust for screen sizes between 801px and 1200px */
         @media (min-width: 801px) and (max-width: 1200px) {
             #homePageBackgroundImageDivStyled {
                 background-image: url('{{ $medium.RelPermalink }}');
             }
         }
-
-        /* Adjust for screen sizes between 1201px and 1500px */
         @media (min-width: 1201px) and (max-width: 1500px) {
             #homePageBackgroundImageDivStyled {
                 background-image: url('{{ $large.RelPermalink }}');
             }
         }
-
-        /* Use the original image for screens larger than 1500px */
         @media (min-width: 1501px) {
             #homePageBackgroundImageDivStyled {
                 background-image: url('{{ $src.RelPermalink }}');
@@ -100,11 +107,17 @@
     </style>
     <span class="on-the-fly-behavior"></span>
     <div id="homePageBackgroundImageDivStyled" class="background container-fluid"></div>
+    {{- if $avail -}}
+    <a class="home-available-pill" href="{{ $coffeeURL }}" target="_blank" rel="noopener noreferrer">
+      <span class="home-available-pill-dot" aria-hidden="true"></span>
+      Available for work
+    </a>
+    {{- end -}}
     <div class="container content text-center">
         <img src="{{ $authorImage.RelPermalink }}" class="mx-auto d-block img-fluid" alt="Author Image" />
-        <h1 style="font-size: 36px;" class="greeting">{{$name}}</h1>
-        <h1 style="font-size: 40px;" class="greeting"> {{ $author.greeting }}</h1>
-        
+        <h1 class="greeting home-hero-tagline">{{ $name }}</h1>
+        <h1 class="greeting home-hero-intro">{{ $author.greeting }}</h1>
+
         {{ if $author.subtitle }}
         <h2 class="greeting-subtitle">{{ $author.subtitle }}</h2>
         {{ end }}
@@ -119,25 +132,8 @@
             {{ end }}
         </ul>
         {{ end }}
-        {{/* Icon row: resume + socials + coffee — same data as About (`data/<lang>/sections/about.yaml`) */}}
-        {{- $aboutScratch := newScratch -}}
-        {{- with index site.Data site.Language.Lang -}}
-          {{- with .sections -}}
-            {{- with index . "about" -}}
-              {{- $aboutScratch.Set "data" . -}}
-            {{- end -}}
-          {{- end -}}
-        {{- end -}}
-        {{- $aboutData := $aboutScratch.Get "data" -}}
         {{- if $aboutData -}}
-        {{- $coffeeScratch := newScratch -}}
-        {{- $coffeeScratch.Set "url" "https://calendly.com/aviralag-alumni/coffeechat" -}}
-        {{- range $aboutData.resourceLinks -}}
-          {{- if strings.Contains (lower .title) "coffee" -}}
-            {{- $coffeeScratch.Set "url" .url -}}
-          {{- end -}}
-        {{- end -}}
-        {{- $coffeeURL := $coffeeScratch.Get "url" -}}
+        {{- $coffeeURL2 := $coffeeScratch.Get "url" -}}
         <ul class="home-hero-icon-row d-flex flex-wrap align-items-center justify-content-center" role="list">
           {{- range $aboutData.resourceLinks -}}
             {{- if not (strings.Contains (lower .title) "coffee") -}}
@@ -163,7 +159,7 @@
             </li>
           {{- end -}}
           <li role="listitem">
-            <a class="home-hero-icon-link" href="{{ $coffeeURL }}" title="Schedule a coffee chat" target="_blank" rel="noopener noreferrer">
+            <a class="home-hero-icon-link" href="{{ $coffeeURL2 }}" title="Schedule a coffee chat" target="_blank" rel="noopener noreferrer">
               <i class="fa-solid fa-mug-hot" aria-hidden="true"></i>
               <span class="visually-hidden">Schedule a coffee chat</span>
             </a>
@@ -180,4 +176,4 @@
         {{ end }}
         {{ end }}
     </div>
-</div> 
+</div>

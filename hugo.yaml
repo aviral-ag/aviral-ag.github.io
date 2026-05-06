@@ -110,6 +110,8 @@ params:
     # Enable and configure blog posts
     blog:
       enable: true
+      # When false, hide the theme’s /posts/ nav item; use a section (e.g. Blog → #recent-posts) instead.
+      showInNavbar: false
       # Share post on different social media
       shareButtons:
         facebook: true

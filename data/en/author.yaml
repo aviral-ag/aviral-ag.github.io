@@ -4,6 +4,10 @@ name: "Aviral Agarwal"
 greeting: "I'm Aviral"
 nickname: "Glad you made it to this corner of the internet!"
 image: "images/author/aviral.jpeg"
+
+# Home hero: “Available for work” pill (links to coffee chat URL from About section)
+availableForWork: true
+
 # give your some contact information. they will be used in the footer
 contactInfo:
   email: "aviralag@alumni.stanford.edu"

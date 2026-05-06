@@ -16,7 +16,11 @@
           <div class="accomplishments-minimal-title-row">
             <div class="accomplishments-minimal-name">{{ $pos.designation }}</div>
             <div class="accomplishments-minimal-year experience-minimal-dates">
-              {{ $pos.start }} – {{ if $pos.end }}{{ $pos.end }}{{ else }}{{ i18n "present" }}{{ end }}
+              {{ if eq $sectionID "volunteer" }}
+                {{ partial "helpers/format-experience-end-only.html" $pos }}
+              {{ else }}
+                {{ partial "helpers/format-experience-dates.html" (dict "start" $pos.start "end" $pos.end) }}
+              {{ end }}
             </div>
           </div>
           <div class="accomplishments-minimal-org">
@@ -26,6 +30,16 @@
               {{ $company.name }}
             {{ end }}
           </div>
+          {{ with $pos.authors }}
+          <div class="experience-minimal-authors">{{ . }}</div>
+          {{ end }}
+          {{ with $pos.paper }}
+            {{ if .url }}
+            <div class="experience-minimal-paper">
+              <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title | default "Publication" }}</a>
+            </div>
+            {{ end }}
+          {{ end }}
         </li>
       {{ end }}
     </ul>

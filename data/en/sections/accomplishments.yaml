@@ -8,29 +8,28 @@ section:
   template: sections/accomplishments.html
 
 
-# Your accomplishments
+# Chronological by year (oldest → newest); `year` drives the date column (year only).
 accomplishments:
-- name: Vice Chancellor Gold Medal
-  timeline: "August 2017 - June 2021"
-  organization:
-    name: Delhi Technological University
-    url: 
-  courseOverview: Highest Cumulative Grade Point Average in the Bachelor Program for Environmental Engineering (2017-2021)
-  # certificateURL: "https://example.com"
-
-- name: Exceptional Research Awards
-  timeline: "June 2020 - January 2021"
-  organization:
-    name: Delhi Technological University
-    url: 
-  courseOverview: Publications in exceptional peer-review journals for the year 2020 and 2021
-  # certificateURL: "https://example.com"
-
 - name: Year Topper
+  year: "2020"
   timeline: "2019 - 2021"
   organization:
     name: Delhi Technological University
-    url: 
+    url:
   courseOverview: Highest Cumulative Grade Point Average for the year 2019 and 2020 in Environmental Engineering
 
+- name: Exceptional Research Awards
+  year: "2021"
+  timeline: "June 2020 - January 2021"
+  organization:
+    name: Delhi Technological University
+    url:
+  courseOverview: Publications in exceptional peer-review journals for the year 2020 and 2021
 
+- name: Vice Chancellor Gold Medal
+  year: "2021"
+  timeline: "August 2017 - June 2021"
+  organization:
+    name: Delhi Technological University
+    url:
+  courseOverview: Highest Cumulative Grade Point Average in the Bachelor Program for Environmental Engineering (2017-2021)

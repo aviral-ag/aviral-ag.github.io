@@ -8,29 +8,32 @@ section:
   template: sections/accomplishments.html
 
 
-# Your accomplishments
+# Chronological order (oldest → newest)
 accomplishments:
 - name: Stanford Graduate School of Business Ignite Program
-  timeline: "June 20223 - July 2023"
+  timeline: "June 2023 - July 2023"
   organization:
     name: Stanford University Graduate School of Business
-    url: 
+    url:
   courseOverview: Intensive entrepreneurship and innovation program for technical professionals transitioning to business leadership
-  # certificateURL: "https://example.com"
 
-- name: Engineer-in-Training 
-  timeline: "Jun 2020 - Jan 2021"
+- name: Engineer-in-Training
+  timeline: "March 2024"
   organization:
     name: National Council of Examiners for Engineering and Surveying
-    url: 
+    url:
   courseOverview: Professional engineering designation earned through rigorous examination and practical training
-  # certificateURL: "https://example.com"
 
 - name: US Green Building Council Green Associate
-  timeline: "March 2024-Present"
-  organization: 
+  timeline: "March 2024"
+  organization:
     name: US Green Building Council
-    url: 
+    url:
   courseOverview: Certification demonstrating core competency in sustainable building practices and LEED principles
 
-
+- name: CFA Institute Certificate in Climate Finance
+  timeline: "June 2026"
+  organization:
+    name: CFA Institute
+    url:
+  courseOverview: Climate finance, sustainable investing, and transition risk aligned with CFA Institute curriculum

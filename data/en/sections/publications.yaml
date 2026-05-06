@@ -1,10 +1,10 @@
-# section information
+# Merged into data/en/sections/research.yaml (single “Research” section). Keep file for reference.
 section:
   name: Publications
   id: publications
-  enable: true
+  enable: false
   weight: 6
-  showOnNavbar: true
+  showOnNavbar: false
 
 # your publications
 publications:

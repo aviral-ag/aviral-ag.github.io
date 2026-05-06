@@ -3,13 +3,35 @@
   {{ $sectionID = .section.id }}
 {{ end }}
 
-<div class="container-fluid anchor pb-5 publications-section publications-minimal-section accomplishments-minimal-section">
+<div class="container-fluid anchor pb-5 accomplishments-section accomplishments-minimal-section experience-minimal-section research-publications-section">
   <div class="container accomplishments-minimal-container">
     <h1 class="accomplishments-minimal-heading">
       <span id="{{ $sectionID }}"></span>{{ .section.name }}
     </h1>
+
+    <h2 class="research-subsection-heading">Experience</h2>
+    <ul class="list-unstyled accomplishments-minimal-list mb-0">
+      {{ range .experiences }}
+        {{ $company := .company }}
+        {{ $pos := index .positions 0 }}
+        <li class="accomplishments-minimal-item">
+          <div class="accomplishments-minimal-title-row">
+            <div class="accomplishments-minimal-name">{{ $pos.designation }}</div>
+            <div class="accomplishments-minimal-year experience-minimal-dates">
+              {{ partial "helpers/format-experience-dates.html" (dict "start" $pos.start "end" $pos.end) }}
+            </div>
+          </div>
+          <div class="accomplishments-minimal-org">
+            {{ $company.name }}
+          </div>
+        </li>
+      {{ end }}
+    </ul>
+
+    {{ with .publications }}
+    <h2 class="research-subsection-heading research-subsection-heading--pubs">Publications</h2>
     <ul class="list-unstyled accomplishments-minimal-list publications-minimal-list mb-0">
-      {{ range .publications }}
+      {{ range . }}
         {{ $href := "" }}
         {{ with .paper }}{{ with .url }}{{ $href = . }}{{ end }}{{ end }}
         {{ if not $href }}{{ with .publishedIn }}{{ with .url }}{{ $href = . }}{{ end }}{{ end }}{{ end }}
@@ -40,5 +62,6 @@
         </li>
       {{ end }}
     </ul>
+    {{ end }}
   </div>
 </div>

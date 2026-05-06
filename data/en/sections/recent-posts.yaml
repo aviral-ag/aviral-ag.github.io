@@ -6,6 +6,6 @@ section:
   weight: 13
   showOnNavbar: true
   numShow: 1
-  showMoreButton: true
+  showMoreButton: false
 
 # Lists recent posts from content/posts/ (numShow: 1); “View all” links to /posts/

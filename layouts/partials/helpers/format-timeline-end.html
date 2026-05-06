@@ -1,0 +1,14 @@
+{{- $raw := strings.TrimSpace . -}}
+{{- if not $raw -}}
+{{- else -}}
+  {{- $norm := replace $raw "–" " - " -}}
+  {{- $norm = replace $norm "—" " - " -}}
+  {{- $norm = replaceRE `(?i)-\s*Present` " - Present" $norm -}}
+  {{- $norm = replaceRE `(\d{4})-([A-Za-z])` "$1 - $2" $norm -}}
+  {{- $parts := split $norm " - " -}}
+  {{- if eq (len $parts) 1 -}}
+    {{- partial "helpers/abbrev-month-year.html" (index $parts 0) -}}
+  {{- else -}}
+    {{- partial "helpers/abbrev-month-year.html" (strings.TrimSpace (index $parts 1)) -}}
+  {{- end -}}
+{{- end -}}

@@ -1,0 +1,9 @@
+{{- $start := partial "helpers/abbrev-month-year.html" (strings.TrimSpace .start) -}}
+{{- $endStr := strings.TrimSpace (.end | default "") -}}
+{{- $end := "" -}}
+{{- if $endStr -}}
+  {{- $end = partial "helpers/abbrev-month-year.html" $endStr -}}
+{{- else -}}
+  {{- $end = i18n "present" -}}
+{{- end -}}
+{{- printf "%s - %s" $start $end -}}

@@ -1,0 +1,24 @@
+{{ $addNavbarSeparator := false }}
+
+{{ $blogNav := site.Params.features.blog.showInNavbar | default true }}
+{{ if and site.Params.features.blog.enable $blogNav }}
+  {{ $addNavbarSeparator = true }}
+{{ end }}
+
+{{ if site.Params.features.notes.enable }}
+  {{ $addNavbarSeparator = true }}
+{{ end }}
+
+{{ $customMenus := site.Params.customMenus }}
+{{ if (index site.Data site.Language.Lang).site.customMenus }}
+  {{ $customMenus = (index site.Data site.Language.Lang).site.customMenus }}
+{{ end }}
+
+{{ if $customMenus }}
+  {{ $navbarMenus := where $customMenus "hideFromNavbar" "ne" true }}
+  {{ if and $navbarMenus (gt (len $navbarMenus) 0) }}
+    {{ $addNavbarSeparator = true }}
+  {{ end }}
+{{ end }}
+
+{{ return $addNavbarSeparator }}

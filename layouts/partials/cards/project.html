@@ -1,14 +1,11 @@
 {{ $slug := .slug | default (urlize .name) }}
 {{ $link := printf "projects/%s/" $slug | relLangURL }}
-{{ $filterCats := "" }}
-{{ with .tags }}{{ $filterCats = delimit (apply . "lower" ".") "," }}{{ end }}
-<div class="project-grid-item d-flex align-items-stretch" data-category='all{{ if $filterCats }}, {{ $filterCats }}{{ end }}'>
+<div class="project-grid-item d-flex align-items-stretch" data-category="all">
     <div class="card project-grid-card h-100 w-100">
         {{ if .image }}
         {{ $imageImage := resources.Get .image }}
         {{ if $imageImage }}
         <a href="{{ $link }}" class="project-grid-card-image-link text-decoration-none">
-            {{/* Fit keeps aspect ratio without cropping (letterboxed in fixed frame via CSS) */}}
             {{ $thumb := $imageImage.Fit "900x560 q85" }}
             <div class="project-grid-card-image-wrap">
                 <img class="project-grid-card-img" src="{{ $thumb.RelPermalink }}" alt="{{ .name }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" loading="lazy" />
@@ -20,17 +17,17 @@
             <h5 class="card-title mb-1">
                 <a href="{{ $link }}" class="text-decoration-none text-heading">{{ .name }}</a>
             </h5>
-            <p class="text-muted small mb-2">{{ .timeline }}</p>
-            <p class="card-text small flex-grow-1">{{ .excerpt }}</p>
+            <p class="project-card-timeline small mb-2">{{ .timeline }}</p>
+            <p class="card-text project-card-excerpt small flex-grow-1">{{ .excerpt }}</p>
             {{ if .tags }}
-            <div class="project-tags-holder mb-2">
+            <div class="project-card-tags" role="list">
                 {{ range .tags }}
-                <span class="badge bg-secondary me-1">{{ . }}</span>
+                <span class="project-card-tag" role="listitem">{{ . }}</span>
                 {{ end }}
             </div>
             {{ end }}
-            <div class="d-flex gap-2 flex-wrap mt-auto align-items-center">
-                <a href="{{ $link }}" class="btn btn-outline-primary btn-sm">View details</a>
+            <div class="d-flex gap-2 flex-wrap mt-auto align-items-center project-card-actions">
+                <a href="{{ $link }}" class="btn btn-sm project-view-details">View details</a>
                 {{ if .repo }}
                 <a class="btn btn-outline-info btn-sm" href="{{ .repo }}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Repository</a>
                 {{ else if .url }}

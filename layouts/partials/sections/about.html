@@ -30,30 +30,27 @@
       </p>
 
       <div class="about-actions">
-        <ul class="social-link d-flex flex-wrap align-items-center about-social-links">
-          {{ range .socialLinks }}
-          <li>
-            {{ if eq .name "Email" }}
-              <a href="mailto:{{ .url }}" title="{{ .name }}" target="_blank" rel="{{.rel | default "noopener"}}"><i class="{{ .icon }}" aria-hidden="true"></i></a>
-            {{ else if eq .name (i18n "phone") }}
-              <a href="tel:{{ .url }}" title="{{ .name }}" target="_blank" rel="{{.rel | default "noopener"}}"><i class="{{ .icon }}" aria-hidden="true"></i></a>
-            {{ else }}
-              <a href="{{ .url }}" title="{{ .name }}" target="_blank" rel="{{.rel | default "noopener"}}"><i class="{{ .icon }}" aria-hidden="true"></i></a>
-            {{ end }}
-          </li>
-          {{ end }}
-        </ul>
-
         <div class="about-button-row d-flex flex-wrap align-items-center gap-2">
           {{ if .resume }}
-          <a class="btn btn-dark" href="{{ .resume | relURL }}" title="{{ i18n "resume"}}" target="_blank" rel="noopener noreferrer">{{ i18n "resume"}}</a>
+          <a class="about-cta about-cta--soft" href="{{ .resume | relURL }}" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-file-lines about-cta-icon" aria-hidden="true"></i>
+            {{ i18n "resume"}}
+          </a>
           {{ end }}
           {{ range .resourceLinks }}
           {{ $href := .url }}
           {{ if not (hasPrefix $href "http") }}
             {{ $href = relURL $href }}
           {{ end }}
-          <a class="btn btn-dark" href="{{ $href }}" title="{{ .title }}" target="_blank" rel="noopener noreferrer">{{ .title }}</a>
+          {{- $coffee := strings.Contains (lower .title) "coffee" -}}
+          <a class="about-cta{{ if $coffee }} about-cta--emphasis{{ else }} about-cta--soft{{ end }}" href="{{ $href }}" target="_blank" rel="noopener noreferrer">
+            {{- if $coffee -}}
+            <i class="fa-solid fa-mug-hot about-cta-icon" aria-hidden="true"></i>
+            {{- else -}}
+            <i class="fas fa-file-lines about-cta-icon" aria-hidden="true"></i>
+            {{- end -}}
+            {{ .title }}
+          </a>
           {{ end }}
         </div>
       </div>

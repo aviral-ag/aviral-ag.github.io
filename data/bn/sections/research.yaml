@@ -4,6 +4,6 @@ section:
   enable: false
   weight: 8
   showOnNavbar: false
-  template: sections/experience-minimal.html
+  template: sections/research-publications.html
 
 experiences: []

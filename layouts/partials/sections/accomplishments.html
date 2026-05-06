@@ -14,7 +14,11 @@
           <div class="accomplishments-minimal-title-row">
             <div class="accomplishments-minimal-name">{{ .name }}</div>
             <div class="accomplishments-minimal-year">
-              {{ partial "helpers/accomplishment-year.html" . }}
+              {{ if eq $sectionID "certifications" }}
+                {{ partial "helpers/format-timeline-end.html" (.timeline | default "") }}
+              {{ else }}
+                {{ partial "helpers/accomplishment-year.html" . }}
+              {{ end }}
             </div>
           </div>
           <div class="accomplishments-minimal-org">
