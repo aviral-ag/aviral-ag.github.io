@@ -6,6 +6,7 @@ $radius-btn: 0.5rem;
 
 body {
   letter-spacing: -0.011em;
+  font-size: 1.0625rem;
 }
 
 h1,
@@ -20,7 +21,9 @@ h6,
 }
 
 .section-holder h1 {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 3px solid get-light-color('accent-color');
 }
 
 .top-navbar:not(.transparent-navbar) {
@@ -81,6 +84,10 @@ h6,
 }
 
 html[data-theme='dark'] {
+  .section-holder h1 {
+    border-bottom-color: get-dark-color('accent-color');
+  }
+
   .top-navbar:not(.transparent-navbar) {
     background-color: rgba(get-dark-color('bg-primary'), 0.88);
     border-bottom: 1px solid rgba(get-dark-color('heading-color'), 0.08);

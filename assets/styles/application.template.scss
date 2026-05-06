@@ -4,8 +4,8 @@
 
 @import 'include-media/dist/_include-media';
 
-// Inter Variable (weights 100–900 in one file)
-@import '@fontsource-variable/inter/wght.css';
+// Inter Variable — @font-face lives in inter-font.scss (paths work in production)
+@import './inter-font';
 
 @import './variables';
 @import './mixins';
