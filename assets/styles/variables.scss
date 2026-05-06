@@ -1,0 +1,87 @@
+@use 'sass:map';
+
+$breakpoints: (
+  tiny: 320px,
+  small: 640px,
+  medium: 768px,
+  large: 1024px,
+  very-large: 1280px,
+  extra-large: 1536px,
+  ultra-large: 2560px,
+);
+
+// Color are chosen from TailwindCSS color scheme
+// https://tailwindcss.com/docs/customizing-colors
+
+// transitions
+$transition-duration: 0.3s;
+$transition-type: ease-out;
+
+// borders and shadows — tighter, more “editorial” than default Toha
+$box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 8px 24px rgba(15, 23, 42, 0.08);
+
+// themes — teal accent (fits environmental / water theme), crisp neutrals
+$themes: (
+  'light': (
+    'accent-color': #0f766e,
+    'hover-over-accent-color': #14b8a6,
+    'text-over-accent-color': #ecfdf5,
+    'bg-primary': #f8fafc,
+    'bg-primary-inverse': #0f172a,
+    'bg-secondary': #e2e8f0,
+    'bg-card': #ffffff,
+    'heading-color': #0f172a,
+    'text-color': #334155,
+    'inverse-text-color': #e2e8f0,
+    'muted-text-color': #64748b,
+    'inline-code-color': #dc2626,
+    'highlight-color': #fef08a,
+    'footer-color': #0f172a,
+  ),
+  'dark': (
+    'accent-color': #2dd4bf,
+    'hover-over-accent-color': #5eead4,
+    'text-over-accent-color': #042f2e,
+    'bg-primary': #0f172a,
+    'bg-primary-inverse': #f8fafc,
+    'bg-secondary': #1e293b,
+    'bg-card': #1e293b,
+    'heading-color': #f1f5f9,
+    'text-color': #cbd5e1,
+    'inverse-text-color': #0f172a,
+    'muted-text-color': #94a3b8,
+    'inline-code-color': #f87171,
+    'highlight-color': #fde68a,
+    'footer-color': #020617,
+  ),
+);
+
+$brand-colors: (
+  'facebook': #3b5998,
+  'twitter': #1da1f2,
+  'linkedin': #0077b5,
+  'reddit': #ff4500,
+  'tumblr': #35465c,
+  'pocket': #ef4056,
+  'diaspora': #1e1e1e,
+  'whatsapp': #25d366,
+);
+
+$alerts: (
+  'success': (
+    'bg-color': #dcfce7,
+    'text-color': #166534,
+  ),
+  'info': (
+    'bg-color': #e0f2fe,
+    'text-color': #075985,
+  ),
+  'warning': (
+    'bg-color': #fef9c3,
+    'text-color': #854d0e,
+  ),
+  'danger': (
+    'bg-color': #fee2e2,
+    'text-color': #991b1b,
+  ),
+);

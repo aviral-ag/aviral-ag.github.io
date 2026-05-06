@@ -1,0 +1,103 @@
+/* Global UI polish: typography rhythm, navbar, cards, sections */
+
+$section-title-weight: 700;
+$radius-card: 0.75rem;
+$radius-btn: 0.5rem;
+
+body {
+  letter-spacing: -0.011em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.section-holder h1 {
+  letter-spacing: -0.028em;
+  font-weight: $section-title-weight;
+}
+
+.section-holder h1 {
+  margin-bottom: 1.25rem;
+}
+
+.top-navbar:not(.transparent-navbar) {
+  background-color: rgba(get-light-color('bg-primary'), 0.88);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  border-bottom: 1px solid rgba(get-light-color('heading-color'), 0.06);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.55) inset;
+}
+
+.top-navbar .navbar-brand {
+  letter-spacing: -0.02em;
+}
+
+.top-navbar li a {
+  letter-spacing: -0.01em;
+}
+
+.card {
+  border-radius: $radius-card;
+  border: 1px solid rgba(get-light-color('heading-color'), 0.07);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+
+  &:hover,
+  &:focus {
+    border-color: rgba(get-light-color('accent-color'), 0.35);
+    transform: translateY(-2px);
+  }
+}
+
+.btn {
+  border-radius: $radius-btn;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.btn-dark {
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.12);
+}
+
+.skills-section .skill-filtr-control,
+.projects-section .filtr-control {
+  border-radius: $radius-btn;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.section-holder {
+  .container,
+  .container-fluid.anchor {
+    max-width: 1120px;
+  }
+}
+
+.publications-section .card,
+.projects-section .card {
+  overflow: hidden;
+}
+
+html[data-theme='dark'] {
+  .top-navbar:not(.transparent-navbar) {
+    background-color: rgba(get-dark-color('bg-primary'), 0.88);
+    border-bottom: 1px solid rgba(get-dark-color('heading-color'), 0.08);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset;
+  }
+
+  .card {
+    border-color: rgba(get-dark-color('heading-color'), 0.1);
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      border-color: rgba(get-dark-color('accent-color'), 0.45);
+    }
+  }
+
+  .btn-dark {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  }
+}
