@@ -1,11 +1,12 @@
 # section information
 section:
-  name: Recent Posts
+  name: Blog
   id: recent-posts
-  enable: false
+  enable: true
   weight: 8
-  showOnNavbar: false
-  # Can optionally hide the title in sections
+  showOnNavbar: true
+  numShow: 6
+  showMoreButton: true
   # hideTitle: true
 
-# no additional configuration is required
+# Lists recent posts from content/posts/; “View all” links to /posts/

@@ -6,7 +6,6 @@ section:
   enable: true
   weight: 4
   showOnNavbar: true
-  # Can optionally hide the title in sections
   # hideTitle: true
 
 degrees:
@@ -16,7 +15,8 @@ degrees:
   institution:
     name: Stanford University
     url: "https://www.stanford.edu/"
-    logo: images/sections/education/su_logo.jpeg
+    logo: images/sections/education/SU_Seal_Red.png
+    darkLogo: images/sections/education/SU_Seal_Black.png
   grade: #(optional)
     scale: GPA
     achieved: 3.7
@@ -24,7 +24,7 @@ degrees:
   extracurricularActivities: #(optional)
   - Member of Stanford Cricket Team.
 - name: Bachelor of Technology in Environmental Engineering
-  icon: fa-university
+  icon: fa-graduation-cap
   timeframe: 2017-2021
   institution:
     name: Delhi Technological University

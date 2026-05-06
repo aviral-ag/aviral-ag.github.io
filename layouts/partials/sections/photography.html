@@ -1,0 +1,38 @@
+{{ $sectionID := replace (lower .section.name) " " "-"  }}
+{{ if .section.id }}
+  {{ $sectionID = .section.id }}
+{{ end }}
+
+<div class="container-fluid anchor pb-5 photography-section">
+  {{ if not (.section.hideTitle) }}
+    <h1 class="text-center">
+        <span id="{{ $sectionID }}"></span>{{ .section.name }}</h1>
+  {{ else }}
+    <h1 class="text-center" style="display: none">
+        <span id="{{ $sectionID }}"></span>{{ .section.name }}</h1>
+  {{ end }}
+
+  <div class="container">
+    <div class="row g-4 photography-grid">
+      {{ range .photos }}
+      {{ $img := resources.Get .image }}
+      <div class="col-12 col-sm-6 col-lg-4 d-flex align-items-stretch">
+        <div class="card photography-card w-100 h-100 border-0">
+          {{ if $img }}
+          {{ $thumb := $img.Fill "1200x800 q85" }}
+          <div class="photography-image-wrap">
+            <img class="photography-img" src="{{ $thumb.RelPermalink }}" alt="{{ .title }}" loading="lazy" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" />
+          </div>
+          {{ end }}
+          <div class="card-body">
+            <h5 class="card-title mb-1">{{ .title }}</h5>
+            {{ if .caption }}
+            <p class="card-text text-muted small mb-0">{{ .caption }}</p>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>

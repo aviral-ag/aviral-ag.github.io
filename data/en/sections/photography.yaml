@@ -1,0 +1,19 @@
+# Photography gallery (grid on homepage). Replace images with your own under assets/images/sections/photography/
+section:
+  name: Photography
+  id: photography
+  enable: true
+  weight: 7
+  showOnNavbar: true
+  template: sections/photography.html
+
+photos:
+  - title: Field work
+    image: images/sections/achievements/presenter.jpg
+    caption: Replace with your photos — add files to assets/images/sections/photography/
+  - title: Outdoors
+    image: images/sections/achievements/sport.jpg
+    caption: Update this YAML with your shots and captions
+  - title: Campus
+    image: images/sections/achievements/graduation-cap.jpg
+    caption: Square or landscape images both work in the grid

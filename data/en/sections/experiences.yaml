@@ -5,10 +5,9 @@ section:
   enable: true
   weight: 3
   showOnNavbar: true
-  # Can optionally hide the title in sections
+  template: sections/experiences.html
   # hideTitle: true 
 
-# Your experiences
 experiences:
 
 - company:
@@ -21,7 +20,8 @@ experiences:
     start: June 2025
     end: Present
     responsibilities:
-    - Managing interns and supporting program development for recycled water and water master planning, including a 24,000 AFY advanced purification facility in Santa Clara County. Accelerate project success through systematic stakeholder collaboration and consultant coordination.
+    - Led recycled-water and master-planning work for a 24,000 AFY advanced purification program, coordinating stakeholders and consultants across Santa Clara County.
+
 - company:
     name: Water Resources Engineering Inc.
     url: "https://wrewater.com/"
@@ -32,7 +32,7 @@ experiences:
     start: January 2025
     end: March 2025
     responsibilities:
-    - Driven sustainable water supply strategies for Bay Area cities, lead analyst for a $5 million, 10 MGD water reuse project to enhance resilience, optimize costs, and manage vendor relationships for data collection and sustainability reporting.
+    - Drove Bay Area water reuse strategy as lead analyst on a $5M, 10 MGD reuse project—vendor data, sustainability reporting, and resilience planning.
 
 - company:
     name: EKI Environment and Water Inc.
@@ -44,11 +44,7 @@ experiences:
     start: July 2023
     end: October 2024
     responsibilities:
-    - Developed an R-based soil moisture balance model for a 100,000+ acre basin, accurately calculating irrigation demand. Executed MODFLOW 6 simulations using FloPy for scenario analysis to inform pumping stress across one of California’s most over-drafted regions.
-    - Streamlined geospatial data for California water districts, optimizing workflows with ArcGIS Pro and Python. Reduced processing time from 2 days to a few hours and improved data accuracy over 20+ years for 5 districts.
-    - Independently assessed applied water usage on a 5,000-acre area using 25+ years of land use data for CUP-E and USADR. Compared CropScape and OpenET datasets, analyzing vegetative water use for DWR/UCDANR.
-    - Utilized DWR Airborne Electromagnetic (AEM) surveys and borehole datasets to develop coarse fraction profiles across 9 aquifer layers. Generated kriging-based rasters in Surfer for a 130,000-acre water district.
-    - Spearheaded a 2-month project to centralize codebases on GitHub, reducing version conflicts by 40% and cutting deployment time by 20%. Potential to to improve team workflows for 10 engineers via Docker and AWS integration.
+    - Built R-based soil moisture and MODFLOW 6 modeling for a 100,000+ acre basin; streamlined GIS/Python workflows for five California water districts.
 
 - company:
     name: Jacobs Engineering Group
@@ -61,8 +57,7 @@ experiences:
     start: June 2022
     end: March 2023
     responsibilities:
-    - Researched and recommended methodology to develop an award-winning Carbon Sequestration Potential Tool across the carbon sinks in the world. 
-    - Created and quality checked several Power BI dashboards that transformed complex environmental, health, and safety data into real-time visualizations for 10+ stakeholders, reducing reporting time by 30%.
+    - Contributed to a global carbon sequestration tool and delivered Power BI dashboards that cut EHS reporting time for multi-site stakeholders.
 
 - company:
     name: The Bill Lane Center for the American West - Stanford University
@@ -75,8 +70,7 @@ experiences:
     start: September 2021
     end: February 2023
     responsibilities:
-    - Analyzed climate change impacts on Central California water infrastructure, using GIS and DWR data to assess basin vulnerabilities, supporting five regional water management plans.
-    - Developed a Python script computing a dynamic resilience index for San Luis Obispo County, integrating 10+ data sources on water demand, supply, and climate projections to enhance drought preparedness efforts.
+    - GIS and DWR-based climate vulnerability work for Central California water plans; Python resilience index for SLO County drought preparedness.
 
 - company:
     name: Global Projects Center
@@ -89,7 +83,7 @@ experiences:
     start: September 2021
     end: December 2022
     responsibilities:
-    - Explored pathways of data that are dynamically priced and traded in the Digital Cities and Disruptive Technology program. Investigated technological components toward creating a marketplace of data.
+    - Explored dynamically priced urban data marketplaces in the Digital Cities program at Stanford.
 
 - company:
     name: Indian Institute of Technology, Bombay
@@ -102,7 +96,7 @@ experiences:
     start: December 2019
     end: January 2021
     responsibilities:
-    - Mapped ambient air pollution exposure assessment in a cohort of adult women at 60+ homes in three metropolitan cities – Delhi, Bengaluru, and Mumbai during the summer and winter seasons. Analyzed spatial traffic proxy variables using ArcGIS, Python, and Excel.
+    - Air pollution exposure mapping across three Indian metros using ArcGIS, Python, and cohort field data.
 
 - company:
     name: SUEZ Water Technologies and Solutions
@@ -115,8 +109,7 @@ experiences:
     start: June 2020
     end: August 2020
     responsibilities:
-    - Worked with the Strategy and Marketing Team to identify challenges faced at the water and wastewater treatment by Tier 1 pharmaceutical companies in India in the production of API Drugs and formulation. 
-    - Responsibilities include formulating business plans to tackle existing and upcoming challenges at the site such as ZLD, UPW, and retrofit systems.
+    - Strategy and marketing analysis for pharma water treatment (ZLD, UPW, retrofits) with the India sales team.
 
 - company:
     name: Center for Science and Environment
@@ -129,8 +122,7 @@ experiences:
     start: May 2019
     end: July 2019
     responsibilities:
-    - Performed secondary research on Mine Closure and Reclamation in India and Globally. Identified numerous Environmental, Social and Health concerns, Financing, Policies regarding Mine Closure. 
-    - Analyzed decade long reports on mine reclamation presented by Coal India Ltd., a subsidiary of CMPDI, to observe the trends of various parameters and the status of reclamation.
+    - Mine closure and reclamation policy research; trend analysis of Coal India reclamation reporting.
 
 - company:
     name: Chintan Environmental Research and Action Group
@@ -143,8 +135,7 @@ experiences:
     start: November 2018
     end: January 2019
     responsibilities:
-    - Worked as a volunteer of the core implementation team for a campaign against plastic pollution- the ‘Plastic Upvaas’ or the ‘Plastic Fast’ Campaign. 
-    - The campaign was in partnership with the Canadian High Commission in India and aimed at motivating consumers to reduce their use of single-use plastics. Actively anchored an awareness session and participated in several awareness drives- interacting with school students and the general public to bring about behavior change.
+    - Core team for the Plastic Upvaas campaign with the Canadian High Commission—awareness drives and behavior-change workshops.
 
 - company:
     name: Global Peace Foundation
@@ -157,5 +148,4 @@ experiences:
     start: May 2018
     end: July 2018
     responsibilities:
-    - Participated in GPF India's two-month interfaith program with 20 diverse students, engaging in discussions and visiting religious sites across New Delhi, where I gained profound insights from faith leaders about universal spiritual values that transcend religious boundaries.
-    - Conducted personal hygiene workshop for students in delhi along with a freeze mob at one of the most crowded places in Delhi on social issues. 
+    - Interfaith leadership program and community hygiene / social-issue outreach in New Delhi.
