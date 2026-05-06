@@ -52,6 +52,16 @@ outputs:
 # Enable global emoji support
 enableEmoji: true
 
+# Hugo native GA4 config (used by Hugo templates/embedded partials)
+services:
+  googleAnalytics:
+    id: G-SQQGSMX11Z
+
+privacy:
+  googleAnalytics:
+    disable: false
+    respectDoNotTrack: true
+
 # Site parameters
 params:
   # Background image of the landing page
@@ -119,7 +129,7 @@ params:
       services:
 
     analytics:
-      enable: true
+      enable: false
       services:
         google:
           id: G-SQQGSMX11Z
