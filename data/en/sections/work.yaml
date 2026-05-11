@@ -15,58 +15,50 @@ experiences:
     name: Santa Clara Valley Water District
     url: "https://www.valleywater.org/"
     location: San Jose, CA
+    logo: /images/sections/experiences/Valley Water.png
     overview:
   positions:
   - designation: Assistant Engineer
     start: June 2025
     end: Present
     responsibilities:
-    - Led recycled-water and master-planning work for a 24,000 AFY advanced purification program, coordinating stakeholders and consultants across Santa Clara County.
-
-- company:
-    name: Water Resources Engineering Inc.
-    url: "https://wrewater.com/"
-    location: San Francisco, CA
-    overview:
-  positions:
-  - designation: Staff Engineer
-    start: January 2025
-    end: March 2025
-    responsibilities:
-    - Drove Bay Area water reuse strategy as lead analyst on a $5M, 10 MGD reuse project—vendor data, sustainability reporting, and resilience planning.
+    - Developed data-driven reporting workflows for a 24,000 AFY infrastructure program, partnering with engineering, operations, and regulatory teams to define requirements, prioritize reporting needs, and translate complex environmental and operational datasets into clear Power BI and Excel dashboards for faster stakeholder decision-making.
 
 - company:
     name: EKI Environment and Water Inc.
     url: "https://www.ekiconsult.com/"
     location: Daly City, CA
+    logo: /images/sections/experiences/EKI.jpeg
     overview:
   positions:
   - designation: Environmental Engineer
     start: July 2023
     end: October 2024
     responsibilities:
-    - Built R-based soil moisture and MODFLOW 6 modeling for a 100,000+ acre basin; streamlined GIS/Python workflows for five California water districts.
+    - Led data models and analytics workflows across five water districts, designing scalable Python and SQL pipelines for 20+ years of environmental data. Established validation standards and translated analytical outputs into actionable planning recommendations, improving reliability, auditability, and system-level decision-making.
 
 - company:
     name: Jacobs Engineering Group
     url: "https://www.jacobs.com/"
     location: San Francisco, CA
+    logo: /images/sections/experiences/Jacobs.png
     overview:
   positions:
   - designation: Environmental, Health and Safety - Information Management Intern
     start: June 2022
     end: March 2023
     responsibilities:
-    - Contributed to a global carbon sequestration tool and delivered Power BI dashboards that cut EHS reporting time for multi-site stakeholders.
+    - Developed Power BI and Tableau tools to track environmental performance metrics, built a carbon analysis tool integrating multi-source datasets, and automated Python workflows that improved reporting efficiency while translating analytical outputs into user-friendly insights for project teams and leadership.
 
 - company:
     name: SUEZ Water Technologies and Solutions
     url: "https://www.suez.com/en/north-america"
     location: Bengaluru, India
+    logo: /images/sections/experiences/Suez.png
     overview:
   positions:
   - designation: Engineering Sales Intern
     start: June 2020
     end: August 2020
     responsibilities:
-    - Strategy and marketing analysis for pharma water treatment (ZLD, UPW, retrofits) with the India sales team.
+    - Worked with the Strategy and Marketing Team to identify water and wastewater treatment challenges for Tier 1 pharmaceutical API and formulation sites in India, supporting business plans for ZLD, UPW, and retrofit systems to address current and emerging operational needs.

@@ -1,9 +1,0 @@
-section:
-  name: গবেষণা অভিজ্ঞতা
-  id: research
-  enable: false
-  weight: 8
-  showOnNavbar: false
-  template: sections/research-publications.html
-
-experiences: []
