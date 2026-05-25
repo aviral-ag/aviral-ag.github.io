@@ -302,6 +302,15 @@ $about-olive: #4f5d48;
   letter-spacing: -0.03em;
 }
 
+.top-navbar.transparent-navbar {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.15) 60%, transparent 100%) !important;
+
+  .navbar-brand,
+  li a {
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  }
+}
+
 .top-navbar:not(.transparent-navbar) {
   background-color: rgba(get-light-color('bg-primary'), 0.88);
   backdrop-filter: blur(14px) saturate(180%);
