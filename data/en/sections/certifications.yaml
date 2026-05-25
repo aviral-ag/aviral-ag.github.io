@@ -37,3 +37,10 @@ accomplishments:
     name: CFA Institute
     url:
   courseOverview: Climate finance, sustainable investing, and transition risk aligned with CFA Institute curriculum
+
+- name: GARP Sustainability and Climate Risk (SCR)
+  timeline: "May 2026"
+  organization:
+    name: Global Association of Risk Professionals
+    url:
+  courseOverview: Sustainability and climate risk management covering physical and transition risks, regulatory frameworks, and climate scenario analysis
