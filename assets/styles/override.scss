@@ -302,12 +302,24 @@ $about-olive: #4f5d48;
   letter-spacing: -0.03em;
 }
 
-.top-navbar {
-  background-color: rgba(get-light-color('bg-primary'), 0.88);
+#top-navbar {
+  background-color: rgba(get-light-color('bg-primary'), 0.88) !important;
   backdrop-filter: blur(14px) saturate(180%);
   -webkit-backdrop-filter: blur(14px) saturate(180%);
   border-bottom: 1px solid rgba(get-light-color('heading-color'), 0.06);
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.55) inset;
+
+  &.transparent-navbar {
+    .navbar-brand {
+      color: get-light-color('heading-color') !important;
+    }
+    li a {
+      color: get-light-color('heading-color') !important;
+    }
+    .feather-menu {
+      stroke: get-light-color('text-color') !important;
+    }
+  }
 }
 
 .top-navbar .navbar-brand {
@@ -1067,10 +1079,22 @@ html[data-theme='dark'] {
     }
   }
 
-  .top-navbar {
-    background-color: rgba(get-dark-color('bg-primary'), 0.88);
+  #top-navbar {
+    background-color: rgba(get-dark-color('bg-primary'), 0.88) !important;
     border-bottom: 1px solid rgba(get-dark-color('heading-color'), 0.08);
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset;
+
+    &.transparent-navbar {
+      .navbar-brand {
+        color: get-dark-color('heading-color') !important;
+      }
+      li a {
+        color: get-dark-color('heading-color') !important;
+      }
+      .feather-menu {
+        stroke: get-dark-color('text-color') !important;
+      }
+    }
   }
 
   .card {
