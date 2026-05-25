@@ -41,9 +41,6 @@
 {{ end }}
 
 {{ $logo := $mainLogo }}
-{{ if .IsHome }}
-  {{ $logo = $invertedLogo }}
-{{ end }}
 
 {{ $customMenus := site.Params.customMenus }}
 {{ if (index site.Data site.Language.Lang).site.customMenus }}
@@ -60,7 +57,7 @@
   {{ $navBarTitle = site.Title }}
 {{ end }}
 
-<nav class="navbar navbar-expand-xl top-navbar shadow {{ if .IsHome}}transparent-navbar homepage{{end}}" id="top-navbar">
+<nav class="navbar navbar-expand-xl top-navbar shadow{{ if .IsHome}} homepage{{end}}" id="top-navbar">
   <div class="container">
     {{ if not .IsHome }}
     <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button">
@@ -74,7 +71,7 @@
       {{- $navBarTitle -}}
     </a>
     <button
-      class="navbar-toggler {{if .IsHome}}navbar-dark{{else}}navbar-light{{end}}"
+      class="navbar-toggler navbar-light"
       id="navbar-toggler"
       type="button"
       data-bs-toggle="collapse"
