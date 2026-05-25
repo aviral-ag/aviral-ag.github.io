@@ -2,7 +2,7 @@
 # Bundled icons mix Devicon (MIT), Simple Icons (CC0), Wikimedia Commons, skill-icons (MIT), and worldvectorlogo.
 
 section:
-  name: Skills and Technologies
+  name: Skills
   id: skills
   enable: true
   weight: 2
