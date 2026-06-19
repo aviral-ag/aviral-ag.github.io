@@ -19,6 +19,8 @@ module:
     target: static/files
   - source: ./node_modules/@fontsource-variable/inter/files
     target: static/fonts/inter
+  - source: ./node_modules/@fontsource/fraunces/files
+    target: static/fonts/fraunces
   - source: ./node_modules/katex/dist/fonts
     target: static/fonts
 
