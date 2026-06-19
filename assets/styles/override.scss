@@ -594,15 +594,11 @@ body.home-page {
   }
 }
 
-.home-about-panel {
+.home-about-panel,
+.home-about-inline {
   position: relative;
   z-index: 2;
   width: 100%;
-  padding: clamp(1rem, 3vw, 2rem) 0 clamp(2rem, 5vw, 3rem);
-
-  .about-section--home {
-    padding: 0 !important;
-  }
 
   .home-about-summary {
     color: #fff;
@@ -713,11 +709,11 @@ body.home-page {
     margin-right: auto;
   }
 
-  .home-hero-inner {
+  .home-page-grid {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.25rem;
+    gap: clamp(1.25rem, 3vh, 2rem);
     width: 100%;
   }
 
@@ -740,28 +736,45 @@ body.home-page {
   .home-hero-text-col {
     flex: 1 1 auto;
     min-width: 0;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    align-items: center;
   }
 
   @media (min-width: 768px) {
-    .home-hero-inner {
-      flex-direction: row;
+    .home-page-grid {
+      display: grid;
+      grid-template-columns: clamp(240px, 32vw, 360px) minmax(0, 1fr);
+      grid-template-rows: auto auto;
       align-items: center;
-      gap: clamp(1.5rem, 4vw, 3rem);
-      text-align: left;
+      column-gap: clamp(1.5rem, 4vw, 3rem);
+      row-gap: clamp(1.25rem, 3vh, 2rem);
     }
 
     .home-hero-photo-col {
-      flex: 0 0 clamp(240px, 32vw, 360px);
+      grid-column: 1;
+      grid-row: 1;
+      align-self: center;
+      justify-self: start;
+    }
+
+    .home-hero-text-col {
+      grid-column: 2;
+      grid-row: 1;
+      align-self: center;
+      text-align: left;
+      align-items: flex-start;
+    }
+
+    .home-about-inline {
+      grid-column: 1 / -1;
+      grid-row: 2;
+      text-align: left;
     }
 
     .home-hero-avatar {
       margin: 0;
-    }
-
-    .home-hero-text-col {
-      text-align: left;
-      align-items: flex-start;
     }
 
     .home-hero-icon-row {
@@ -877,7 +890,7 @@ body.home-page {
       align-items: center;
     }
 
-    .home-hero-inner {
+    .home-page-grid {
       align-items: center;
       justify-content: center;
     }
@@ -903,6 +916,10 @@ body.home-page {
     .typing-carousel {
       margin-left: auto;
       margin-right: auto;
+    }
+
+    .home-about-inline {
+      text-align: center;
     }
   }
 }

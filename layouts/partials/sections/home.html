@@ -114,7 +114,7 @@
     </a>
     {{- end -}}
     <div class="container content home-hero-layout">
-        <div class="home-hero-inner">
+        <div class="home-page-grid">
             <div class="home-hero-photo-col">
                 <img src="{{ $authorImage.RelPermalink }}" class="home-hero-avatar img-fluid" alt="Author Image" />
             </div>
@@ -171,11 +171,12 @@
         </ul>
         {{- end -}}
             </div>
+            {{- if and $aboutData $aboutData.section.enable -}}
+            <div class="home-about-inline">
+              <span id="about" class="visually-hidden"></span>
+              <p class="home-about-summary">{{ $aboutData.summary | markdownify }}</p>
+            </div>
+            {{- end -}}
         </div>
     </div>
-    {{- if and $aboutData $aboutData.section.enable -}}
-    <div class="container-fluid home-about-panel">
-      {{- partial "sections/about-home.html" $aboutData -}}
-    </div>
-    {{- end -}}
 </div>
