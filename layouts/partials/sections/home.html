@@ -166,14 +166,5 @@
           </li>
         </ul>
         {{- end -}}
-        {{ if $sections }}
-        {{ range first 1 (where (sort $sections "section.weight") ".section.enable" true) }}
-        {{ $sectionID := replace (lower .section.name) " " "-" }}
-        {{ if .section.id }}
-        {{ $sectionID = .section.id }}
-        {{ end }}
-        <a href="#{{ $sectionID }}" class="arrow-center" aria-label="{{ i18n "read" }} {{ i18n "more" }} - {{ $name }}"><i class="arrow bounce fa fa-chevron-down"></i></a>
-        {{ end }}
-        {{ end }}
     </div>
 </div>

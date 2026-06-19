@@ -1,0 +1,2 @@
+{{ $sectionID := partial "helpers/get-section-id.html" . }}
+{{ return (printf "/%s/" $sectionID | relLangURL) }}

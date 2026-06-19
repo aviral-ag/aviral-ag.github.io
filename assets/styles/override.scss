@@ -565,6 +565,27 @@ $about-olive: #4f5d48;
   }
 }
 
+// Static landing: home fills the viewport; section tabs open separate pages
+body.home-page {
+  overflow: hidden;
+  height: 100vh;
+  max-height: 100vh;
+
+  @supports (height: 100dvh) {
+    height: 100dvh;
+    max-height: 100dvh;
+  }
+}
+
+.section-page-content {
+  padding-top: 50px;
+  min-height: calc(100vh - 50px);
+
+  @supports (min-height: 100dvh) {
+    min-height: calc(100dvh - 50px);
+  }
+}
+
 // Photo hero: full viewport + light theme-tinted scrim over background image + “Available for work” corner pill
 .home {
   position: relative;

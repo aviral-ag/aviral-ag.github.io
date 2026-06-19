@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+  <head>
+    <title>{{- .Site.Title -}}</title>
+    {{ $siteDescription := .Site.Params.description }}
+    {{ if (index .Site.Data .Site.Language.Lang).site }}
+      {{ $siteConfig := (index .Site.Data .Site.Language.Lang).site }}
+      {{ if $siteConfig.description }}
+        {{ $siteDescription = $siteConfig.description }}
+      {{ end }}
+    {{ end }}
+    <meta name="description" content="{{ $siteDescription }}" />
+
+    {{- partial "header.html" . -}}
+    {{- partial "opengraph.html" . -}}
+    {{- partial "analytics.html" . -}}
+    <script>
+      theme = localStorage.getItem('theme-scheme') || localStorage.getItem('darkmode:color-scheme') || 'light';
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        theme = theme === 'system' ? 'dark' : theme;
+      } else if (theme === 'system') {
+        theme = 'light';
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    </script>
+  </head>
+  <body class="home-page">
+
+    {{- partial "navigators/navbar.html" . -}}
+    {{- partial "sections/home.html" . -}}
+
+    {{ $footerTemplate:= site.Params.footer.template | default "footer.html" }}
+    {{- partial $footerTemplate . -}}
+    {{ partial "scripts.html" . }}
+    {{- partial "misc/support.html" . -}}
+
+  </body>
+</html>

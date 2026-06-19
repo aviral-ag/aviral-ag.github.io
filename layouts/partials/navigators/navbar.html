@@ -57,7 +57,7 @@
   {{ $navBarTitle = site.Title }}
 {{ end }}
 
-<nav class="navbar navbar-expand-xl top-navbar shadow{{ if .IsHome}} homepage{{end}}" id="top-navbar">
+<nav class="navbar navbar-expand-xl top-navbar shadow" id="top-navbar">
   <div class="container">
     {{ if not .IsHome }}
     <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button">
@@ -84,7 +84,7 @@
     <div class="collapse navbar-collapse dynamic-navbar" id="top-nav-items">
       <ul class="nav navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" href="{{ if .IsHome }}#home{{else}}{{ site.BaseURL | relLangURL }}#home{{end}}">{{ i18n "home" }}</a>
+          <a class="nav-link" href="{{ site.BaseURL | relLangURL }}">{{ i18n "home" }}</a>
         </li>
         {{ if $sections }}
           {{ $sectionCount := 1 }}

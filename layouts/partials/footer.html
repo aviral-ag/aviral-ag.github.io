@@ -102,7 +102,7 @@
                   {{ $sectionID = .section.id }}
                 {{ end }}
                 <li class="nav-item">
-                  <a class="smooth-scroll" href="{{ "" | absLangURL }}#{{ $sectionID }}">{{ .section.name }}</a>
+                  <a href="{{ partial "helpers/get-section-url.html" . }}">{{ .section.name }}</a>
                 </li>
               {{ end }}
             {{- end }}

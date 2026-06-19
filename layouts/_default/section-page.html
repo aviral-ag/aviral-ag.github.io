@@ -1,0 +1,53 @@
+{{ $sectionKey := .Params.sectionKey | default .File.ContentBaseName }}
+{{ $sectionData := "" }}
+{{ if (index site.Data site.Language.Lang).sections }}
+  {{ $sectionData = index (index site.Data site.Language.Lang).sections $sectionKey }}
+{{ end }}
+{{ if not $sectionData }}
+  {{ $sectionData = index site.Data.sections $sectionKey }}
+{{ end }}
+
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+  <head>
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <meta name="description" content="{{ with $sectionData }}{{ .section.name }}{{ else }}{{ .Title }}{{ end }}" />
+
+    {{- partial "header.html" . -}}
+    {{- partial "opengraph.html" . -}}
+    {{- partial "analytics.html" . -}}
+    <script>
+      theme = localStorage.getItem('theme-scheme') || localStorage.getItem('darkmode:color-scheme') || 'light';
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        theme = theme === 'system' ? 'dark' : theme;
+      } else if (theme === 'system') {
+        theme = 'light';
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    </script>
+  </head>
+  <body class="section-page">
+
+    {{- partial "navigators/navbar.html" . -}}
+
+    {{ with $sectionData }}
+      <div class="container-fluid section-holder d-flex bg-primary section-page-content">
+        {{ if .section.template }}
+          {{- partial .section.template . -}}
+        {{ else }}
+          {{- partial (printf "sections/%s.html" (replace (lower .section.id) " " "-")) . -}}
+        {{ end }}
+      </div>
+    {{ else }}
+      <div class="container section-page-content py-5">
+        <p class="text-muted">This section could not be loaded.</p>
+      </div>
+    {{ end }}
+
+    {{ $footerTemplate:= site.Params.footer.template | default "footer.html" }}
+    {{- partial $footerTemplate . -}}
+    {{ partial "scripts.html" . }}
+    {{- partial "misc/support.html" . -}}
+
+  </body>
+</html>
