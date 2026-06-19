@@ -29,6 +29,7 @@
         {{ .summary | markdownify }}
       </p>
 
+      {{ if not .hideActions }}
       <div class="about-actions">
         <div class="about-button-row d-flex flex-wrap align-items-center gap-2">
           {{ if .resume }}
@@ -54,6 +55,7 @@
           {{ end }}
         </div>
       </div>
+      {{ end }}
     </div>
     <!-- soft skills circular-progressbar -->
     <div class="col-sm-6 pt-5 ps-md-4 ps-sm-3 pt-sm-0">
