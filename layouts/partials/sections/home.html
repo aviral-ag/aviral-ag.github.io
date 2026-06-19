@@ -138,7 +138,7 @@
         {{ end }}
         {{- if $aboutData -}}
         {{- $coffeeURL2 := $coffeeScratch.Get "url" -}}
-        <ul class="home-hero-icon-row d-flex flex-wrap align-items-center" role="list">
+        <ul class="home-hero-icon-row d-flex flex-wrap align-items-center justify-content-center" role="list">
           {{- range $aboutData.resourceLinks -}}
             {{- if not (strings.Contains (lower .title) "coffee") -}}
             {{- $href := .url -}}

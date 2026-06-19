@@ -761,6 +761,7 @@ body.home-page {
 
     .home-hero-text-col {
       text-align: left;
+      align-items: flex-start;
     }
 
     .home-hero-icon-row {
@@ -865,6 +866,42 @@ body.home-page {
   .arrow {
     position: relative;
     bottom: auto;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .home {
+    .content {
+      align-items: center;
+    }
+
+    .home-hero-inner {
+      align-items: center;
+      justify-content: center;
+    }
+
+    .home-hero-photo-col {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .home-hero-text-col {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    .home-hero-icon-row {
+      justify-content: center !important;
+    }
+
+    .typing-carousel {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 
