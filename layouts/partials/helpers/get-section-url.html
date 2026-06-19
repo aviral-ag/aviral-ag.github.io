@@ -1,2 +1,6 @@
-{{ $sectionID := partial "helpers/get-section-id.html" . }}
-{{ return (printf "/%s/" $sectionID | relLangURL) }}
+{{- $sectionID := partial "helpers/get-section-id.html" . -}}
+{{- if eq $sectionID "about" -}}
+{{- site.BaseURL | relLangURL }}#about
+{{- else -}}
+{{- printf "/%s/" $sectionID | relLangURL -}}
+{{- end -}}

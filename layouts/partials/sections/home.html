@@ -113,8 +113,12 @@
       Available for work
     </a>
     {{- end -}}
-    <div class="container content text-center">
-        <img src="{{ $authorImage.RelPermalink }}" class="mx-auto d-block img-fluid" alt="Author Image" />
+    <div class="container content home-hero-layout">
+        <div class="home-hero-inner">
+            <div class="home-hero-photo-col">
+                <img src="{{ $authorImage.RelPermalink }}" class="home-hero-avatar img-fluid" alt="Author Image" />
+            </div>
+            <div class="home-hero-text-col">
         <h1 class="greeting home-hero-tagline">{{ $name }}</h1>
         <h1 class="greeting home-hero-intro">{{ $author.greeting }}</h1>
 
@@ -134,7 +138,7 @@
         {{ end }}
         {{- if $aboutData -}}
         {{- $coffeeURL2 := $coffeeScratch.Get "url" -}}
-        <ul class="home-hero-icon-row d-flex flex-wrap align-items-center justify-content-center" role="list">
+        <ul class="home-hero-icon-row d-flex flex-wrap align-items-center" role="list">
           {{- range $aboutData.resourceLinks -}}
             {{- if not (strings.Contains (lower .title) "coffee") -}}
             {{- $href := .url -}}
@@ -166,5 +170,7 @@
           </li>
         </ul>
         {{- end -}}
+            </div>
+        </div>
     </div>
 </div>

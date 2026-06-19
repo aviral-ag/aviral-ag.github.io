@@ -6,7 +6,7 @@ $radius-btn: 0.5rem;
 
 body {
   letter-spacing: -0.011em;
-  font-size: 1.0625rem;
+  font-size: 1.125rem;
   color: get-light-color('text-color');
 }
 
@@ -32,6 +32,7 @@ h6,
 .section-heading-page,
 .accomplishments-minimal-heading {
   text-align: left;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
   font-weight: $section-title-weight;
   letter-spacing: -0.028em;
   margin-bottom: 1.5rem;
@@ -338,14 +339,14 @@ $about-olive: #4f5d48;
   }
 
   .top-navbar .nav-item .nav-link {
-    padding-left: 0.3rem;
-    padding-right: 0.3rem;
-    font-size: 0.75rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    font-size: 0.875rem;
     white-space: nowrap;
   }
 
   .top-navbar .navbar-brand {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .top-navbar #top-navbar-divider {
@@ -565,24 +566,50 @@ $about-olive: #4f5d48;
   }
 }
 
-// Static landing: home fills the viewport; section tabs open separate pages
+// Home scrolls when About panel is included below the hero
 body.home-page {
-  overflow: hidden;
-  height: 100vh;
-  max-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 100vh;
 
-  @supports (height: 100dvh) {
-    height: 100dvh;
-    max-height: 100dvh;
+  @supports (min-height: 100dvh) {
+    min-height: 100dvh;
   }
 }
 
 .section-page-content {
   padding-top: 50px;
   min-height: calc(100vh - 50px);
+  font-size: 1.125rem;
 
   @supports (min-height: 100dvh) {
     min-height: calc(100dvh - 50px);
+  }
+
+  p,
+  li,
+  .card-text {
+    font-size: 1.0625rem;
+    line-height: 1.65;
+  }
+}
+
+.home-about-panel {
+  .about-section {
+    font-size: 1.0625rem;
+
+    h3 {
+      font-size: 1.35rem;
+    }
+
+    h5 {
+      font-size: 1.1rem;
+    }
+
+    p {
+      font-size: 1.0625rem;
+      line-height: 1.65;
+    }
   }
 }
 
@@ -673,15 +700,72 @@ body.home-page {
     min-height: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     height: auto;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
+    padding-left: clamp(0.75rem, 3vw, 2rem);
+    padding-right: clamp(0.75rem, 3vw, 2rem);
     padding-top: clamp(3.75rem, 11vh, 6rem);
     padding-bottom: clamp(1rem, 4vh, 2.75rem);
-    max-width: #{'min(96vw, 56rem)'};
+    max-width: #{'min(96vw, 72rem)'};
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    width: 100%;
+  }
+
+  .home-hero-photo-col {
+    flex: 0 0 auto;
+  }
+
+  .home-hero-avatar {
+    display: block;
+    width: clamp(150px, 32vw, 260px);
+    height: clamp(150px, 32vw, 260px);
+    object-fit: cover;
+    background-color: #fff;
+    padding: 3px;
+    border-radius: 50%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    margin: 0 auto;
+  }
+
+  .home-hero-text-col {
+    flex: 1 1 auto;
+    min-width: 0;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .home-hero-inner {
+      flex-direction: row;
+      align-items: center;
+      gap: clamp(1.5rem, 4vw, 3rem);
+      text-align: left;
+    }
+
+    .home-hero-photo-col {
+      flex: 0 0 clamp(200px, 24vw, 280px);
+    }
+
+    .home-hero-avatar {
+      margin: 0;
+    }
+
+    .home-hero-text-col {
+      text-align: left;
+    }
+
+    .home-hero-icon-row {
+      justify-content: flex-start !important;
+    }
   }
 
   .greeting,
@@ -693,7 +777,7 @@ body.home-page {
   }
 
   .home-hero-tagline {
-    font-size: clamp(0.68rem, calc(0.35rem + 2.35vw), 2.25rem);
+    font-size: clamp(0.85rem, calc(0.45rem + 2.5vw), 2.35rem);
     font-weight: 700;
     line-height: 1.18;
     letter-spacing: -0.03em;
@@ -703,7 +787,7 @@ body.home-page {
   }
 
   .home-hero-intro {
-    font-size: clamp(1.15rem, 3.1vw, 2.5rem);
+    font-size: clamp(1.25rem, 3.4vw, 2.65rem);
     font-weight: 700;
     line-height: 1.15;
     letter-spacing: -0.035em;
@@ -722,6 +806,7 @@ body.home-page {
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     color: #fff;
+    font-size: clamp(1rem, 2.2vw, 1.2rem);
     font-weight: 500;
     letter-spacing: -0.02em;
     line-height: 1.5;
