@@ -119,8 +119,10 @@
                 <img src="{{ $authorImage.RelPermalink }}" class="home-hero-avatar img-fluid" alt="Author Image" />
             </div>
             <div class="home-hero-text-col">
-        <h1 class="greeting home-hero-tagline">{{ $name }}</h1>
         <h1 class="greeting home-hero-intro">{{ $author.greeting }}</h1>
+        {{ if $author.nickname }}
+        <p class="greeting home-hero-tagline">{{ $author.nickname }}</p>
+        {{ end }}
 
         {{ if $author.subtitle }}
         <h2 class="greeting-subtitle">{{ $author.subtitle }}</h2>
