@@ -8,14 +8,19 @@
   {{ $author = (index site.Data site.Language.Lang).author }}
 {{ end }}
 
-<div class="container anchor p-lg-5 about-section">
+<div class="container anchor p-lg-5 about-section{{ if .hideActions }} about-section--home{{ end }}">
+  {{ if .hideActions }}
+  <span id="{{ $sectionID }}" class="visually-hidden"></span>
+  {{ else }}
   <h1 class="section-heading-page about-section-heading">
     <span id="{{ $sectionID }}"></span>{{ .section.name }}
   </h1>
+  {{ end }}
   <div class="row pt-sm-2 pt-md-4 align-self-center">
     <!-- summary -->
     <!-- takes up full section width if no badges/soft skills are specified -->
     {{ if or (.softSkills) (.badges) }} <div class="col-sm-6"> {{ else }} <div class="col-sm-12"> {{ end }}
+      {{ if not .hideActions }}
       <h3 class="p-1">{{ $author.name }}</h3>
       {{ if .designation }}
       <h5 class="p-1">
@@ -25,7 +30,8 @@
         {{ end }}
       </h5>
       {{ end }}
-      <p class="p-1 text-justify">
+      {{ end }}
+      <p class="p-1 text-justify{{ if .hideActions }} home-about-summary{{ end }}">
         {{ .summary | markdownify }}
       </p>
 
