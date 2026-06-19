@@ -29,18 +29,6 @@
     {{- partial "navigators/navbar.html" . -}}
     {{- partial "sections/home.html" . -}}
 
-    {{ $sections := site.Data.sections }}
-    {{ if (index site.Data site.Language.Lang).sections }}
-      {{ $sections = (index site.Data site.Language.Lang).sections }}
-    {{ end }}
-    {{ with index $sections "about" }}
-      {{ if .section.enable }}
-        <div class="container-fluid section-holder d-flex bg-primary home-about-panel">
-          {{- partial "sections/about.html" . -}}
-        </div>
-      {{ end }}
-    {{ end }}
-
     {{ $footerTemplate:= site.Params.footer.template | default "footer.html" }}
     {{- partial $footerTemplate . -}}
     {{ partial "scripts.html" . }}

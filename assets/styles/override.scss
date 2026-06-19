@@ -595,8 +595,19 @@ body.home-page {
 }
 
 .home-about-panel {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: clamp(1.5rem, 4vw, 2.5rem) 0 clamp(2rem, 5vw, 3rem);
+
   .about-section {
     font-size: 1.0625rem;
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(get-light-color('heading-color'), 0.08);
+    border-radius: $radius-card;
+    box-shadow: 0 12px 40px rgba(64, 78, 59, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 
     h3 {
       font-size: 1.35rem;
@@ -613,29 +624,23 @@ body.home-page {
   }
 }
 
-// Photo hero: full viewport + light theme-tinted scrim over background image + “Available for work” corner pill
+// Photo hero: full viewport minimum; About lives on the same homepage below the intro
 .home {
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  max-height: 100vh;
-  min-height: 0;
-  overflow: hidden;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow: visible;
   box-sizing: border-box;
-
-  @supports (height: 100dvh) {
-    height: 100dvh;
-    max-height: 100dvh;
-  }
 
   .background {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
+    bottom: 0;
     width: 100%;
-    min-height: 100%;
     z-index: 0;
 
     &::after {
@@ -1199,6 +1204,12 @@ html[data-theme='dark'] {
 
   .experience-row-logo-placeholder {
     color: get-dark-color('muted-text-color');
+  }
+
+  .home-about-panel .about-section {
+    background: rgba(42, 51, 40, 0.94);
+    border-color: rgba(get-dark-color('heading-color'), 0.12);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
   }
 
   .about-section .about-button-row {

@@ -173,4 +173,9 @@
             </div>
         </div>
     </div>
+    {{- if and $aboutData $aboutData.section.enable -}}
+    <div class="container-fluid home-about-panel">
+      {{- partial "sections/about.html" $aboutData -}}
+    </div>
+    {{- end -}}
 </div>
