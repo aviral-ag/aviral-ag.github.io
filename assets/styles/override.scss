@@ -788,7 +788,7 @@ body.home-page {
   }
 
   .home-hero-tagline {
-    font-size: clamp(1.05rem, calc(0.6rem + 2.35vw), 2rem);
+    font-size: clamp(0.9rem, calc(0.5rem + 1.6vw), 1.35rem);
     font-weight: 600;
     font-style: italic;
     line-height: 1.35;
@@ -926,7 +926,7 @@ body.home-page {
   }
 
   .home .home-hero-tagline {
-    font-size: clamp(1rem, calc(0.65rem + 3.8vw), 1.65rem);
+    font-size: clamp(0.85rem, calc(0.55rem + 2.8vw), 1.2rem);
     line-height: 1.32;
   }
 
