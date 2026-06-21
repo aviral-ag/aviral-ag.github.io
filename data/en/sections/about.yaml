@@ -39,8 +39,8 @@ socialLinks:
   icon: "fab fa-linkedin"
   url: "https://linkedin.com/in/aviralag"
 
-- name: Twitter
-  icon: "fab fa-twitter"
+- name: X
+  icon: "fab fa-x-twitter"
   url: "https://twitter.com/aviralag_"
 
 # You can put custom buttons to link your relevant resources.

@@ -74,7 +74,7 @@ params:
 
   # Configure the number of section title visible in the top navbar
   topNavbar:
-    maxVisibleSections: 7
+    maxVisibleSections: 5
 
   # Configure various features of this theme
 

@@ -120,12 +120,11 @@
             </div>
             <div class="home-hero-text-col">
         <h1 class="greeting home-hero-intro">{{ $author.greeting }}</h1>
+        {{ if $author.subtitle }}
+        <p class="home-hero-value-prop">{{ $author.subtitle }}</p>
+        {{ end }}
         {{ if $author.nickname }}
         <p class="greeting home-hero-tagline">{{ $author.nickname }}</p>
-        {{ end }}
-
-        {{ if $author.subtitle }}
-        <h2 class="greeting-subtitle">{{ $author.subtitle }}</h2>
         {{ end }}
         {{ if $author.summary }}
         <div class="typing-carousel">
@@ -140,37 +139,49 @@
         {{ end }}
         {{- if $aboutData -}}
         {{- $coffeeURL2 := $coffeeScratch.Get "url" -}}
-        <ul class="home-hero-icon-row d-flex flex-wrap align-items-center justify-content-start" role="list">
+        <div class="home-hero-actions">
           {{- range $aboutData.resourceLinks -}}
-            {{- if not (strings.Contains (lower .title) "coffee") -}}
+            {{- if strings.Contains (lower .title) "resume" -}}
             {{- $href := .url -}}
             {{- if not (hasPrefix $href "http") }}{{ $href = relURL $href }}{{ end -}}
-            <li role="listitem">
-              <a class="home-hero-icon-link" href="{{ $href }}" title="{{ .title }}" target="_blank" rel="noopener noreferrer">
-                <i class="fas fa-file-lines" aria-hidden="true"></i>
-                <span class="visually-hidden">{{ .title }}</span>
-              </a>
-            </li>
+            <a class="home-hero-cta home-hero-cta--primary" href="{{ $href }}" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-file-lines" aria-hidden="true"></i>
+              <span>View Resume</span>
+            </a>
             {{- end -}}
           {{- end -}}
-          {{- range $aboutData.socialLinks -}}
-            <li role="listitem">
-              {{- if eq .name "Email" -}}
-              <a class="home-hero-icon-link" href="mailto:{{ .url }}" title="{{ .name }}" rel="noopener"><i class="{{ .icon }}" aria-hidden="true"></i><span class="visually-hidden">{{ .name }}</span></a>
-              {{- else if eq .name (i18n "phone") -}}
-              <a class="home-hero-icon-link" href="tel:{{ .url }}" title="{{ .name }}" rel="noopener"><i class="{{ .icon }}" aria-hidden="true"></i><span class="visually-hidden">{{ .name }}</span></a>
-              {{- else -}}
-              <a class="home-hero-icon-link" href="{{ .url }}" title="{{ .name }}" target="_blank" rel="noopener"><i class="{{ .icon }}" aria-hidden="true"></i><span class="visually-hidden">{{ .name }}</span></a>
+          <ul class="home-hero-icon-row d-flex flex-wrap align-items-center justify-content-start" role="list">
+            {{- range $aboutData.resourceLinks -}}
+              {{- if and (not (strings.Contains (lower .title) "coffee")) (not (strings.Contains (lower .title) "resume")) -}}
+              {{- $href := .url -}}
+              {{- if not (hasPrefix $href "http") }}{{ $href = relURL $href }}{{ end -}}
+              <li role="listitem">
+                <a class="home-hero-icon-link" href="{{ $href }}" title="{{ .title }}" target="_blank" rel="noopener noreferrer">
+                  <i class="fas fa-link" aria-hidden="true"></i>
+                  <span class="visually-hidden">{{ .title }}</span>
+                </a>
+              </li>
               {{- end -}}
+            {{- end -}}
+            {{- range $aboutData.socialLinks -}}
+              <li role="listitem">
+                {{- if eq .name "Email" -}}
+                <a class="home-hero-icon-link" href="mailto:{{ .url }}" title="{{ .name }}" rel="noopener"><i class="{{ .icon }}" aria-hidden="true"></i><span class="visually-hidden">{{ .name }}</span></a>
+                {{- else if eq .name (i18n "phone") -}}
+                <a class="home-hero-icon-link" href="tel:{{ .url }}" title="{{ .name }}" rel="noopener"><i class="{{ .icon }}" aria-hidden="true"></i><span class="visually-hidden">{{ .name }}</span></a>
+                {{- else -}}
+                <a class="home-hero-icon-link" href="{{ .url }}" title="{{ .name }}" target="_blank" rel="noopener"><i class="{{ .icon }}" aria-hidden="true"></i><span class="visually-hidden">{{ .name }}</span></a>
+                {{- end -}}
+              </li>
+            {{- end -}}
+            <li role="listitem">
+              <a class="home-hero-icon-link" href="{{ $coffeeURL2 }}" title="Schedule a coffee chat" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-mug-hot" aria-hidden="true"></i>
+                <span class="visually-hidden">Schedule a coffee chat</span>
+              </a>
             </li>
-          {{- end -}}
-          <li role="listitem">
-            <a class="home-hero-icon-link" href="{{ $coffeeURL2 }}" title="Schedule a coffee chat" target="_blank" rel="noopener noreferrer">
-              <i class="fa-solid fa-mug-hot" aria-hidden="true"></i>
-              <span class="visually-hidden">Schedule a coffee chat</span>
-            </a>
-          </li>
-        </ul>
+          </ul>
+        </div>
         {{- end -}}
             </div>
             {{- if and $aboutData $aboutData.section.enable -}}

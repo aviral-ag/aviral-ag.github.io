@@ -2,6 +2,7 @@
 name: "Aviral Agarwal"
 # greeting message before your name. it will default to "Hi! I am" if not provided
 greeting: "Hello, I'm Aviral"
+subtitle: "Environmental Engineer × Climate Finance × Geospatial AI"
 nickname: "Glad you made it to this corner of the internet!"
 image: "images/author/aviral.jpeg"
 
