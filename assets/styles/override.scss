@@ -614,7 +614,7 @@ body.home-page {
   .home-about-summary {
     font-family: 'Inter Variable', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
     color: #fff;
-    font-size: clamp(0.95rem, 1.85vw, 1.2rem);
+    font-size: clamp(1rem, 2vw, 1.3rem);
     font-weight: 600;
     line-height: 1.35;
     letter-spacing: -0.015em;
@@ -736,6 +736,7 @@ body.home-page {
     display: flex;
     flex-direction: column;
     gap: clamp(1.25rem, 3vh, 1.75rem);
+    align-items: stretch;
   }
 
   .home-hero-photo-col {
@@ -766,37 +767,29 @@ body.home-page {
   @media (min-width: 768px) {
     .home-page-grid {
       display: grid;
-      grid-template-columns: clamp(220px, 30vw, 360px) minmax(0, 1fr);
-      grid-template-rows: auto auto;
-      grid-template-areas:
-        'photo content'
-        'bio content';
-      align-items: start;
+      grid-template-columns: auto minmax(0, 1fr);
+      grid-template-rows: auto;
+      align-items: center;
       width: 100%;
       max-width: 100%;
       margin-inline: auto;
       column-gap: clamp(1.5rem, 4vw, 3rem);
-      row-gap: clamp(1rem, 2.5vh, 1.35rem);
+      row-gap: 0;
     }
 
     .home-hero-photo-col {
-      grid-area: photo;
-      align-self: start;
+      align-self: center;
       justify-self: start;
-      width: 100%;
-    }
-
-    .home-about-inline {
-      grid-area: bio;
-      align-self: start;
-      justify-self: stretch;
-      width: 100%;
     }
 
     .home-hero-content-col {
-      grid-area: content;
-      grid-row: 1 / -1;
       align-self: center;
+      min-width: 0;
+    }
+
+    .home-about-inline {
+      width: 100%;
+      max-width: 100%;
     }
 
     .home-hero-text-col {

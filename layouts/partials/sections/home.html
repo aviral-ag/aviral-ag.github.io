@@ -190,13 +190,13 @@
         </div>
         {{- end -}}
             </div>
-            </div>
             {{- if and $aboutData $aboutData.section.enable -}}
             <div class="home-about-inline">
               <span id="about" class="visually-hidden"></span>
               <p class="home-about-summary">{{ $aboutData.summary | markdownify }}</p>
             </div>
             {{- end -}}
+            </div>
         </div>
     </div>
     {{- if $aboutData -}}
