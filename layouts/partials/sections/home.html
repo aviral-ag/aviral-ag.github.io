@@ -118,6 +118,7 @@
             <div class="home-hero-photo-col">
                 <img src="{{ $authorImage.RelPermalink }}" class="home-hero-avatar img-fluid" alt="Author Image" />
             </div>
+            <div class="home-hero-content-col">
             <div class="home-hero-text-col">
         <h1 class="greeting home-hero-intro">{{ $author.greeting }}</h1>
         {{ if $author.subtitle }}
@@ -144,10 +145,18 @@
             {{- if strings.Contains (lower .title) "resume" -}}
             {{- $href := .url -}}
             {{- if not (hasPrefix $href "http") }}{{ $href = relURL $href }}{{ end -}}
-            <a class="home-hero-cta home-hero-cta--primary" href="{{ $href }}" target="_blank" rel="noopener noreferrer">
-              <i class="fas fa-file-lines" aria-hidden="true"></i>
-              <span>View Resume</span>
-            </a>
+            {{- $preview := $href -}}
+            {{- if strings.Contains $href "drive.google.com/file/d/" -}}
+              {{- $preview = printf "https://drive.google.com/file/d/%s/preview" (index (split (index (split $href "/d/") 1) "/") 0) -}}
+            {{- else if hasSuffix $href ".pdf" -}}
+              {{- $preview = $href -}}
+            {{- end -}}
+            <div class="home-hero-resume-wrap">
+              <a class="home-hero-cta home-hero-cta--primary home-hero-resume-trigger" href="{{ $href }}" target="_blank" rel="noopener noreferrer" data-resume-preview="{{ $preview }}" data-resume-open="{{ $href }}">
+                <i class="fas fa-file-lines" aria-hidden="true"></i>
+                <span>View Resume</span>
+              </a>
+            </div>
             {{- end -}}
           {{- end -}}
           <ul class="home-hero-icon-row d-flex flex-wrap align-items-center justify-content-start" role="list">
@@ -190,6 +199,23 @@
               <p class="home-about-summary">{{ $aboutData.summary | markdownify }}</p>
             </div>
             {{- end -}}
+            </div>
         </div>
     </div>
+    {{- if $aboutData -}}
+    {{- range $aboutData.resourceLinks -}}
+    {{- if strings.Contains (lower .title) "resume" -}}
+    <aside id="resume-preview-panel" class="resume-preview-panel" aria-hidden="true" aria-label="Resume preview">
+      <div class="resume-preview-panel-header">
+        <span class="resume-preview-panel-title">Resume</span>
+        <a class="resume-preview-panel-open" href="#" target="_blank" rel="noopener noreferrer">Open in new tab</a>
+        <button type="button" class="resume-preview-panel-close" aria-label="Close resume preview">&times;</button>
+      </div>
+      <div class="resume-preview-panel-body">
+        <iframe class="resume-preview-iframe" title="Resume preview" loading="lazy" referrerpolicy="no-referrer"></iframe>
+      </div>
+    </aside>
+    {{- end -}}
+    {{- end -}}
+    {{- end -}}
 </div>

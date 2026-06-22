@@ -726,8 +726,16 @@ body.home-page {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: calc(clamp(2rem, 5vh, 3rem) + 80px);
+    gap: clamp(1.75rem, 4vh, 2.5rem);
     width: 100%;
+  }
+
+  .home-hero-content-col {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.25rem, 3vh, 1.75rem);
   }
 
   .home-hero-photo-col {
@@ -758,36 +766,34 @@ body.home-page {
   @media (min-width: 768px) {
     .home-page-grid {
       display: grid;
-      grid-template-columns: auto minmax(0, max-content);
-      grid-template-rows: auto auto;
-      align-items: center;
-      width: max-content;
+      grid-template-columns: auto minmax(0, 1fr);
+      grid-template-rows: auto;
+      align-items: start;
+      width: 100%;
       max-width: 100%;
       margin-inline: auto;
       column-gap: clamp(1.5rem, 4vw, 3rem);
-      row-gap: calc(clamp(2rem, 5vh, 3rem) + 80px);
+      row-gap: 0;
     }
 
     .home-hero-photo-col {
       grid-column: 1;
       grid-row: 1;
-      align-self: center;
+      align-self: start;
       justify-self: start;
+      position: sticky;
+      top: clamp(4.5rem, 12vh, 6rem);
+    }
+
+    .home-hero-content-col {
+      grid-column: 2;
+      grid-row: 1;
+      align-self: start;
     }
 
     .home-hero-text-col {
-      grid-column: 2;
-      grid-row: 1;
-      align-self: center;
       text-align: left;
       align-items: flex-start;
-    }
-
-    .home-about-inline {
-      grid-column: 1 / -1;
-      grid-row: 2;
-      text-align: left;
-      width: 100%;
     }
 
     .home-hero-avatar {
@@ -858,6 +864,11 @@ body.home-page {
     gap: 0.75rem 0.65rem;
     margin-top: 1.35rem;
     width: 100%;
+  }
+
+  .home-hero-resume-wrap {
+    position: relative;
+    display: inline-flex;
   }
 
   .home-hero-cta--primary {
@@ -946,6 +957,109 @@ body.home-page {
   }
 }
 
+// Resume side preview panel (opens on hover / tap)
+.resume-preview-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: #{'min(46vw, 520px)'};
+  height: 100vh;
+  height: 100dvh;
+  z-index: 1040;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: -10px 0 36px rgba(0, 0, 0, 0.24);
+  transform: translateX(102%);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    transform 0.28s ease,
+    opacity 0.22s ease,
+    visibility 0.28s;
+  pointer-events: none;
+
+  &.is-open {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+.resume-preview-panel-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+  padding: 0.65rem 0.85rem;
+  background: #2f3438;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.resume-preview-panel-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.resume-preview-panel-open {
+  margin-left: auto;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.88) !important;
+  text-decoration: none !important;
+  white-space: nowrap;
+
+  &:hover {
+    color: #fff !important;
+    text-decoration: underline !important;
+  }
+}
+
+.resume-preview-panel-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.85rem;
+  height: 1.85rem;
+  padding: 0;
+  border: none;
+  border-radius: 0.35rem;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.15s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+  }
+}
+
+.resume-preview-panel-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  background: #525659;
+}
+
+.resume-preview-iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #525659;
+}
+
+@media (max-width: 767.98px) {
+  .resume-preview-panel {
+    width: #{'min(92vw, 420px)'};
+  }
+}
+
 @media (max-width: 767.98px) {
   .home {
     .content {
@@ -974,6 +1088,11 @@ body.home-page {
     .home-about-inline {
       align-self: stretch;
       width: 100%;
+    }
+
+    .home-hero-content-col {
+      align-self: stretch;
+      justify-content: flex-start;
     }
 
     .home-hero-icon-row {
