@@ -1,6 +1,7 @@
 {{ $skill := . }}
 <div
   class="skill-pill filtr-item"
+  role="listitem"
   data-category='all, {{ with .categories }}{{ delimit . "," }}{{ end }}'
 >
   <span class="skill-pill-icon" aria-hidden="true">

@@ -20,9 +20,7 @@
     {{- $wanted := . -}}
     {{- range $catalog -}}
       {{- if eq .name $wanted -}}
-      <div role="listitem">
         {{ partial "cards/skill.html" . }}
-      </div>
       {{- end -}}
     {{- end -}}
   {{- end -}}
