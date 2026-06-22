@@ -13,6 +13,9 @@ projects:
   image: "images/sections/projects/SMB.jpeg"
   timeline: "January 2024 - August 2024"
   excerpt: "R-based soil moisture balance and MODFLOW 6 / FloPy modeling for irrigation demand and groundwater stress on a 100,000+ acre California basin under SGMA."
+  skills:
+  - R
+  - Python
 
 - name: CARMA - Startup Simulation Project
   slug: carma-startup-simulation
@@ -25,28 +28,39 @@ projects:
   image: "images/sections/projects/Freq_Anal.jpg"
   timeline: "September 2022 - December 2022"
   excerpt: "Non-stationary frequency analysis on 76 years of flows and precipitation across 133 gauges using Vogel et al. (2011) methods and magnification factors."
-
+  skills:
+  - R
 
 - name: Flood Mitigation Analysis for Foster City
   slug: flood-mitigation-foster-city
   image: "images/sections/projects/Flood.png"
   timeline: "September 2021 - December 2021"
   excerpt: "Monte Carlo flood risk and expected-loss analysis leading to a hybrid insurance + levee strategy that cut annual loss exposure substantially."
+  skills:
+  - R
+  - MATLAB
 
 - name: Water Resiliency Model for Central Coast California
   slug: water-resiliency-central-coast
   image: "images/sections/projects/sustain_index.jpg"
   timeline: "September 2021 - February 2023"
   excerpt: "GIS and DWR-driven vulnerability assessment for Central Coast water plans plus a county-scale Python resilience index from multi-source data."
+  skills:
+  - Python
+  - ArcGIS Pro
 
 - name: Life Cycle Assessment of Geothermal Energy for Data Centers
   slug: lca-geothermal-data-centers
   image: "images/sections/projects/LCA.jpg"
   timeline: "September 2022 - December 2022"
   excerpt: "Comparative environmental and economic LCA of grid vs geothermal power and waste heat recovery for data center energy strategies."
+  skills:
+  - SimaPro
 
 - name: Sustainable Energy Model for 2050
   slug: sustainable-energy-2050
   image: "images/sections/projects/Model.png"
   timeline: "January 2022 - March 2022"
   excerpt: "Scenario framework for national energy mixes and policies toward a Paris-aligned system for ~9 billion people by 2050."
+  skills:
+  - Excel VBA

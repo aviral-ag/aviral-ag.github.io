@@ -61,6 +61,9 @@
             {{ else if $match }}
               {{ with $match.excerpt }}<p class="project-detail-lede">{{ . }}</p>{{ end }}
             {{ end }}
+            {{ with $match.skills }}
+            {{ partial "helpers/skill-pills.html" (dict "names" .) }}
+            {{ end }}
             {{ with .Params.tags }}
               <div class="project-detail-tags" aria-label="Topics">
                 {{ range . }}<span class="project-detail-tag">{{ . }}</span>{{ end }}

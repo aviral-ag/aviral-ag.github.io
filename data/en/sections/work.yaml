@@ -21,6 +21,9 @@ experiences:
   - designation: Assistant Engineer
     start: June 2025
     end: Present
+    skills:
+    - PowerBI
+    - Excel VBA
     responsibilities:
     - Developed data-driven reporting workflows for a 24,000 AFY infrastructure program, partnering with engineering, operations, and regulatory teams to define requirements, prioritize reporting needs, and translate complex environmental and operational datasets into clear Power BI and Excel dashboards for faster stakeholder decision-making.
 
@@ -34,6 +37,9 @@ experiences:
   - designation: Environmental Engineer
     start: July 2023
     end: October 2024
+    skills:
+    - Python
+    - SQL
     responsibilities:
     - Led data models and analytics workflows across five water districts, designing scalable Python and SQL pipelines for 20+ years of environmental data. Established validation standards and translated analytical outputs into actionable planning recommendations, improving reliability, auditability, and system-level decision-making.
 
@@ -47,6 +53,10 @@ experiences:
   - designation: Environmental, Health and Safety - Information Management Intern
     start: June 2022
     end: March 2023
+    skills:
+    - Python
+    - PowerBI
+    - Tableau
     responsibilities:
     - Developed Power BI and Tableau tools to track environmental performance metrics, built a carbon analysis tool integrating multi-source datasets, and automated Python workflows that improved reporting efficiency while translating analytical outputs into user-friendly insights for project teams and leadership.
 

@@ -1,0 +1,29 @@
+{{- $names := .names -}}
+{{- if not $names -}}
+  {{- return -}}
+{{- end -}}
+{{- $catalog := slice -}}
+{{- $sections := site.Data.sections -}}
+{{- if (index site.Data site.Language.Lang).sections -}}
+  {{- $sections = (index site.Data site.Language.Lang).sections -}}
+{{- end -}}
+{{- with index $sections "skills" -}}
+  {{- with .skills -}}
+    {{- $catalog = . -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $catalog -}}
+  {{- return -}}
+{{- end -}}
+<div class="skills-pill-cloud skills-pill-cloud--inline skills-pill-layout" role="list" aria-label="Tools and technologies">
+  {{- range $names -}}
+    {{- $wanted := . -}}
+    {{- range $catalog -}}
+      {{- if eq .name $wanted -}}
+      <div role="listitem">
+        {{ partial "cards/skill.html" . }}
+      </div>
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+</div>

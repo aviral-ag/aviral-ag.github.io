@@ -601,9 +601,8 @@ body.home-page {
   width: 100%;
 
   &.home-about-inline {
-    max-width: 56rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    margin-right: 0;
     padding: 1.5rem clamp(1rem, 3vw, 1.75rem) clamp(1rem, 2.5vw, 1.35rem);
     border-radius: $radius-card;
     background: rgba(0, 0, 0, 0.28);
@@ -759,9 +758,12 @@ body.home-page {
   @media (min-width: 768px) {
     .home-page-grid {
       display: grid;
-      grid-template-columns: clamp(240px, 32vw, 360px) minmax(0, 1fr);
+      grid-template-columns: auto minmax(0, max-content);
       grid-template-rows: auto auto;
       align-items: center;
+      width: max-content;
+      max-width: 100%;
+      margin-inline: auto;
       column-gap: clamp(1.5rem, 4vw, 3rem);
       row-gap: calc(clamp(2rem, 5vh, 3rem) + 80px);
     }
@@ -785,6 +787,7 @@ body.home-page {
       grid-column: 1 / -1;
       grid-row: 2;
       text-align: left;
+      width: 100%;
     }
 
     .home-hero-avatar {
@@ -801,7 +804,7 @@ body.home-page {
   .home-hero-value-prop {
     font-family: 'Inter Variable', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
     font-size: clamp(0.72rem, 1.35vw, 0.88rem);
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: $jade-pale;
@@ -968,6 +971,11 @@ body.home-page {
       width: 100%;
     }
 
+    .home-about-inline {
+      align-self: stretch;
+      width: 100%;
+    }
+
     .home-hero-icon-row {
       justify-content: flex-start !important;
       align-self: stretch;
@@ -1058,14 +1066,23 @@ html[data-theme='dark'] .projects-section .project-view-details {
   letter-spacing: -0.01em;
 }
 
-// Skills: pill badges (icon + label), flex-wrap cloud — same .container column as Experiences
-.skills-section.skills-pill-layout {
+// Skills: pill badges (icon + label), flex-wrap cloud
+.skills-pill-layout {
   .skills-pill-cloud {
     display: flex;
     flex-wrap: wrap;
     gap: 0.65rem 0.7rem;
     justify-content: flex-start;
     align-items: center;
+    padding: 1.25rem 0 0;
+  }
+
+  .skills-pill-cloud--inline {
+    padding: 0;
+    margin-top: 0.85rem;
+  }
+
+  .skills-section & .skills-pill-cloud {
     padding: 1.25rem 0 0;
   }
 
@@ -1173,7 +1190,7 @@ html[data-theme='dark'] {
     color: get-dark-color('heading-color');
   }
 
-  .skills-section.skills-pill-layout {
+  .skills-pill-layout {
     .skill-pill {
       background: rgba(45, 54, 42, 0.72);
       border-color: rgba(get-dark-color('heading-color'), 0.12);

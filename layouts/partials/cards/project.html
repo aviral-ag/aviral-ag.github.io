@@ -19,6 +19,9 @@
             </h5>
             <p class="project-card-timeline small mb-2">{{ .timeline }}</p>
             <p class="card-text project-card-excerpt small flex-grow-1">{{ .excerpt }}</p>
+            {{ with .skills }}
+            {{ partial "helpers/skill-pills.html" (dict "names" .) }}
+            {{ end }}
             {{ if .tags }}
             <div class="project-card-tags" role="list">
                 {{ range .tags }}

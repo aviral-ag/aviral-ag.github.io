@@ -4,9 +4,9 @@
 section:
   name: Skills
   id: skills
-  enable: true
+  enable: false
   weight: 2
-  showOnNavbar: true
+  showOnNavbar: false
 
 skills:
 - name: Python

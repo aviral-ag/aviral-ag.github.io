@@ -50,6 +50,9 @@
               <p class="experience-summary-para mb-2 mb-md-3">{{ . | markdownify }}</p>
               {{ end }}
             </div>
+            {{ with $pos.skills }}
+            {{ partial "helpers/skill-pills.html" (dict "names" .) }}
+            {{ end }}
             </div>
           </div>
         </div>
