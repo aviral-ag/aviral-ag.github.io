@@ -1,22 +1,19 @@
 {{ $slug := .slug | default (urlize .name) }}
 {{ $link := printf "projects/%s/" $slug | relLangURL }}
 <div class="project-grid-item d-flex align-items-stretch" data-category="all">
+    <a href="{{ $link }}" class="project-grid-card-link text-decoration-none d-flex w-100 h-100">
     <div class="card project-grid-card h-100 w-100">
         {{ if .image }}
         {{ $imageImage := resources.Get .image }}
         {{ if $imageImage }}
-        <a href="{{ $link }}" class="project-grid-card-image-link text-decoration-none">
             {{ $thumb := $imageImage.Fit "900x560 q85" }}
             <div class="project-grid-card-image-wrap">
                 <img class="project-grid-card-img" src="{{ $thumb.RelPermalink }}" alt="{{ .name }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" loading="lazy" />
             </div>
-        </a>
         {{ end }}
         {{ end }}
         <div class="card-body d-flex flex-column">
-            <h5 class="card-title mb-1">
-                <a href="{{ $link }}" class="text-decoration-none text-heading">{{ .name }}</a>
-            </h5>
+            <h5 class="card-title mb-1">{{ .name }}</h5>
             <p class="project-card-timeline small mb-2">{{ .timeline }}</p>
             <p class="card-text project-card-excerpt small flex-grow-1">{{ .excerpt }}</p>
             {{ with .skills }}
@@ -29,14 +26,7 @@
                 {{ end }}
             </div>
             {{ end }}
-            <div class="d-flex gap-2 flex-wrap mt-auto align-items-center project-card-actions">
-                <a href="{{ $link }}" class="btn btn-sm project-view-details">View details</a>
-                {{ if .repo }}
-                <a class="btn btn-outline-info btn-sm" href="{{ .repo }}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Repository</a>
-                {{ else if .url }}
-                <a class="btn btn-outline-info btn-sm" href="{{ .url }}" target="_blank" rel="noopener" onclick="event.stopPropagation()">External link</a>
-                {{ end }}
-            </div>
         </div>
     </div>
+    </a>
 </div>

@@ -1,12 +1,64 @@
-import { init } from 'ityped'
-
-// Typing carousel — strip emoji / exotic Unicode that can confuse ityped rendering
+// Typing carousel — strip emoji / exotic Unicode that can confuse rendering
 function stringForTyped(raw) {
   return raw
     .replace(/\p{Extended_Pictographic}/gu, '')
     .replace(/\uFE0F/g, '')
     .replace(/\s+/g, ' ')
     .trim()
+}
+
+function initTypingCarousel() {
+  const target = document.getElementById('ityped')
+  const dataList = document.getElementById('typing-carousel-data')
+  if (!target || !dataList) return
+
+  const strings = Array.from(dataList.children)
+    .map((el) => stringForTyped(el.textContent))
+    .filter(Boolean)
+
+  if (strings.length === 0) return
+
+  const cursor = target.parentElement?.querySelector('.ityped-cursor')
+  let stringIndex = 0
+  let charIndex = 0
+  let deleting = false
+
+  const typeSpeed = 55
+  const deleteSpeed = 32
+  const pauseAfterType = 2200
+  const pauseAfterDelete = 420
+
+  const tick = () => {
+    const current = strings[stringIndex]
+    if (!current) return
+
+    if (!deleting) {
+      target.textContent = current.slice(0, charIndex + 1)
+      charIndex += 1
+
+      if (charIndex >= current.length) {
+        deleting = true
+        window.setTimeout(tick, pauseAfterType)
+        return
+      }
+      window.setTimeout(tick, typeSpeed)
+      return
+    }
+
+    charIndex -= 1
+    target.textContent = current.slice(0, charIndex)
+
+    if (charIndex <= 0) {
+      deleting = false
+      stringIndex = (stringIndex + 1) % strings.length
+      window.setTimeout(tick, pauseAfterDelete)
+      return
+    }
+    window.setTimeout(tick, deleteSpeed)
+  }
+
+  if (cursor) cursor.style.visibility = 'visible'
+  window.setTimeout(tick, 320)
 }
 
 function initResumePreview() {
@@ -76,20 +128,6 @@ function initResumePreview() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const ul = document.getElementById('typing-carousel-data')?.children
-  if (ul != null && ul.length > 0) {
-    const strings = Array.from(ul)
-      .map((el) => stringForTyped(el.textContent))
-      .filter(Boolean)
-
-    if (strings.length > 0) {
-      init('#ityped', {
-        strings,
-        startDelay: 220,
-        loop: true,
-      })
-    }
-  }
-
+  initTypingCarousel()
   initResumePreview()
 })

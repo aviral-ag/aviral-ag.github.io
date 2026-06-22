@@ -115,8 +115,16 @@
     {{- end -}}
     <div class="container content home-hero-layout">
         <div class="home-page-grid">
+            <div class="home-hero-left-col">
             <div class="home-hero-photo-col">
                 <img src="{{ $authorImage.RelPermalink }}" class="home-hero-avatar img-fluid" alt="Author Image" />
+            </div>
+            {{- if and $aboutData $aboutData.section.enable -}}
+            <div class="home-about-inline">
+              <span id="about" class="visually-hidden"></span>
+              <p class="home-about-summary">{{ $aboutData.summary | markdownify }}</p>
+            </div>
+            {{- end -}}
             </div>
             <div class="home-hero-content-col">
             <div class="home-hero-text-col">
@@ -124,15 +132,12 @@
         {{ if $author.subtitle }}
         <p class="home-hero-value-prop">{{ $author.subtitle }}</p>
         {{ end }}
-        {{ if $author.nickname }}
-        <p class="greeting home-hero-tagline">{{ $author.nickname }}</p>
-        {{ end }}
         {{ if $author.summary }}
         <div class="typing-carousel">
             <span id="ityped" class="ityped"></span>
-            <span class="ityped-cursor"></span>
+            <span class="ityped-cursor" aria-hidden="true"></span>
         </div>
-        <ul id="typing-carousel-data">
+        <ul id="typing-carousel-data" class="visually-hidden" aria-hidden="true">
             {{ range $author.summary }}
             <li>{{ . }}</li>
             {{ end }}
@@ -193,12 +198,6 @@
         </div>
         {{- end -}}
             </div>
-            {{- if and $aboutData $aboutData.section.enable -}}
-            <div class="home-about-inline">
-              <span id="about" class="visually-hidden"></span>
-              <p class="home-about-summary">{{ $aboutData.summary | markdownify }}</p>
-            </div>
-            {{- end -}}
             </div>
         </div>
     </div>
