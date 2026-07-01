@@ -747,12 +747,22 @@ body.home-page {
     display: block;
     width: clamp(190px, 42vw, 340px);
     height: clamp(190px, 42vw, 340px);
+    max-width: none;
     object-fit: cover;
+    object-position: center 20%;
+    aspect-ratio: 1 / 1;
     background-color: #fff;
     padding: 4px;
     border-radius: 50%;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
     margin: 0 auto;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  // Override theme `.home img` mobile rules (width 140px, height auto, max-width 50%)
+  img.home-hero-avatar {
+    max-width: none;
   }
 
   .home-hero-text-col {
@@ -1081,7 +1091,14 @@ body.home-page {
 
 @media (max-width: 767.98px) {
   .home {
+    overflow: visible;
+
     .content {
+      top: 0 !important;
+      height: auto !important;
+      min-height: 0;
+      overflow: visible;
+      padding-top: clamp(4.75rem, 17vw, 6.25rem);
       align-items: center;
     }
 
@@ -1094,6 +1111,15 @@ body.home-page {
       display: flex;
       justify-content: center;
       width: 100%;
+      overflow: visible;
+      padding-top: 0.35rem;
+    }
+
+    .home-hero-avatar {
+      width: clamp(168px, 54vw, 250px) !important;
+      height: clamp(168px, 54vw, 250px) !important;
+      max-width: none !important;
+      object-position: center 15%;
     }
 
     .home-hero-text-col {
@@ -1132,7 +1158,7 @@ body.home-page {
 
 @media (max-width: 639.98px) {
   .home .content {
-    padding-top: clamp(3.5rem, 14vw, 5rem);
+    padding-top: clamp(4.75rem, 17vw, 6.25rem);
     padding-bottom: clamp(0.75rem, 3vh, 2rem);
   }
 
