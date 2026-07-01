@@ -1,0 +1,17 @@
+{{- $aboutScratch := newScratch -}}
+{{- with index site.Data site.Language.Lang -}}
+  {{- with .sections -}}
+    {{- with index . "about" -}}
+      {{- $aboutScratch.Set "data" . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $aboutData := $aboutScratch.Get "data" -}}
+{{- if and $aboutData $aboutData.section.enable -}}
+<section class="home-about-section anchor" id="about" aria-labelledby="home-about-heading">
+  <div class="container home-about-section-inner">
+    <h2 class="home-about-section-heading" id="home-about-heading">About</h2>
+    <p class="home-about-section-text">{{ $aboutData.summary }}</p>
+  </div>
+</section>
+{{- end -}}
